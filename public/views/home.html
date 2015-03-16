@@ -1,5 +1,19 @@
-<div class="jumbotron text-center">
-	<h1>Home Page 4 Life</h1>
+<div class="row" id="home-logo">
+    <a ui-sref="home"><img src="../images/ifocus.png" alt="ifocus logo"></a>
+</div>
 
-	<p>{{ mainCtrl.tagline }}</p>
+<div class="row">
+    <form role="form" class="form-horizontal" method="post" action="#" onsubmit="return false;">
+        <div class="form-group-lg">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="input-group">
+                    <input type="text" name="search-input" class="form-control"
+                           autocomplete="off" placeholder="Input what you want to see">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary btn-lg" id="insight-button">GO</button>
+                        </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-md-8 -->
+        </div>
+    </form>
 </div>
