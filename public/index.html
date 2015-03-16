@@ -16,9 +16,10 @@
 	<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
+    <script src="js/directive/piechart.drct.js"></script>
 	<script src="js/controllers/MainCtrl.js"></script>
-	<script src="js/controllers/NerdCtrl.js"></script>
-	<script src="js/services/NerdService.js"></script>
+	<script src="js/controllers/AdminCtrl.js"></script>
+	<script src="js/services/AdminService.js"></script>
 	<script src="js/controllers/GeekCtrl.js"></script>
 	<script src="js/services/GeekService.js"></script>
 	<script src="js/appRoutes.js"></script>
@@ -28,22 +29,22 @@
 
 <!-- HEADER -->
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">iFocus</a>
         </div>
 
-        <div class="navbar-collapse collapse">
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a ui-sref="home">Home</a></li>
-                <li><a ui-sref="nerds">Nerds</a></li>
+                <li><a ui-sref="admin">Admin</a></li>
                 <li><a ui-sref="geeks">Geeks</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container">
+<div class="container-fluid">
 	<!-- ANGULAR DYNAMIC CONTENT -->
 	<div ui-view></div>
 
