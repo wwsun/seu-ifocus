@@ -1,1 +1,17 @@
-angular.module('sampleApp', ['ui.router', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService']);
+angular.module('sampleApp', [
+    'ui.router',
+    'appRoutes',
+
+    // --- DIRECTIVES ---
+    'chart.pie',
+
+    // --- SERVICES ---
+    'AdminService',
+    'GeekService',
+
+    // --- CONTROLLERS ---
+    'MainCtrl',
+    'AdminCtrl',
+    'GeekCtrl'
+
+]);
