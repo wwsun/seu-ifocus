@@ -4,6 +4,7 @@ angular.module('sampleApp', [
 
     // --- DIRECTIVES ---
     'chart.pie',
+    'chart.path',
 
     // --- SERVICES ---
     'AdminService',
