@@ -4,6 +4,8 @@
   "dependencies": {
     "bootstrap": "latest",
     "angular": "latest",
-    "angular-ui-router": "latest"
+    "angular-ui-router": "latest",
+    "bootstrap-material-design": "~0.2.2",
+    "d3": "~3.5.5"
   }
 }
