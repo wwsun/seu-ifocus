@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Main panel</div>
         <div class="panel-body">
-            <div path-chart></div>
+            <path-chart data="adminCtrl.flowGraph" clicked-point="clickedNode"></path-chart>
         </div>
     </div>
 </div>
@@ -12,7 +12,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Configuration</div>
         <div class="panel-body">
-            <form action="post" class="form-horizontal">
+            <form method="get" class="form-horizontal">
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Start date</label>
@@ -49,14 +49,25 @@
     <div class="panel panel-default">
         <div class="panel-heading">Detail 1</div>
         <div class="panel-body">
-            Panel content
+
+            <div ng-show="clickedNode">
+                <h2>Url: {{clickedNode.url}}</h2>
+            </div>
+
+            <div ng-show="!clickedNode">
+                <h2>[hover over a node]</h2>
+            </div>
+
         </div>
     </div>
 
     <div class="panel panel-default">
         <div class="panel-heading">Detail 2</div>
         <div class="panel-body">
-            Panel content
+            <p>Knowledge Level</p>
+            <div class="checkbox" ng-repeat="item in adminCtrl.knowledge.level1">
+                <label><input type="checkbox" value="{{item}}"/>{{item}}</label>
+            </div>
         </div>
     </div>
 </div>
