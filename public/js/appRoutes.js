@@ -12,7 +12,12 @@ angular.module('appRoutes', []).config(function($stateProvider, $urlRouterProvid
         .state('admin', {
             url: '/admin',
             templateUrl: 'views/admin.html',
-            controller: 'AdminController as adminCtrl'
+            controller: 'AdminController as adminCtrl',
+            resolve: {
+                graphDataPromise: ['graphData', function(graphData) {
+                    return graphData.getAll();
+                }]
+            }
         })
 
         .state('geeks', {
