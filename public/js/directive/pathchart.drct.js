@@ -102,8 +102,6 @@ function pathChart() {
 
         node.on('click', nodeClickHandler);
 
-
-
         function nodeClickHandler(d) {
             // d is the data item for the current data/element pair
             scope.$apply(function() {
