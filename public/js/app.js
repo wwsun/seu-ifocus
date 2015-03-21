@@ -2,6 +2,8 @@ angular.module('sampleApp', [
     'ui.router',
     'appRoutes',
 
+    'chart.js',
+
     // --- DIRECTIVES ---
     'chart.pie',
     'chart.path',
@@ -12,6 +14,7 @@ angular.module('sampleApp', [
 
     // --- CONTROLLERS ---
     'MainCtrl',
+    'StatusCtrl',
     'AdminCtrl',
     'GeekCtrl'
 
