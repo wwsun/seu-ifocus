@@ -9,6 +9,12 @@ angular.module('appRoutes', []).config(function($stateProvider, $urlRouterProvid
             controller: 'MainController as mainCtrl'
         })
 
+        .state('status',{
+            url: '/status',
+            templateUrl: 'views/status.html',
+            controller: 'StatusController as statusCtrl'
+        })
+
         .state('admin', {
             url: '/admin',
             templateUrl: 'views/admin.html',
