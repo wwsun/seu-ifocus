@@ -10,7 +10,7 @@ angular.module('AdminCtrl', []).controller('AdminController', function(graphData
     vm.tagline = 'This is the admin page';
 
     vm.knowledge = {
-        level1:['Homepage', 'Search', 'Product', 'Ad']
+        level1: ['Homepage', 'Search', 'Product', 'Ad']
     };
 
     vm.flowGraph = graphData.flowData;

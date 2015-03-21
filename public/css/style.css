@@ -9,6 +9,10 @@ body {
     text-align: center;
 }
 
+div#status h1 {
+    font-size: 5em;
+}
+
 svg {
     display: block;
     width: 90%;
