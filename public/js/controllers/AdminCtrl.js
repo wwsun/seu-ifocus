@@ -14,4 +14,9 @@ angular.module('AdminCtrl', []).controller('AdminController', function(graphData
     };
 
     vm.flowGraph = graphData.flowData;
+
+    vm.nodeDetail = {
+        labels: ["Through", "Drop-off"],
+        data: [800, 200]
+    };
 });

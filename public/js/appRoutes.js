@@ -13,7 +13,22 @@ angular.module('appRoutes', []).config(function($stateProvider, $urlRouterProvid
             url: '/status',
             templateUrl: 'views/status.html',
             controller: 'StatusController as statusCtrl'
+            //views: {
+            //    '': {
+            //        templateUrl: 'views/status.html',
+            //        controller: 'StatusController as StatusCtrl'
+            //    },
+            //    'top20@status': {
+            //        templateUrl: ''
+            //    }
+            //}
         })
+
+        //.state('status.day', {
+        //    url: '/day',
+        //    templateUrl: 'views/status-day.html',
+        //    controller: 'StatusDayController as statusDayCtrl'
+        //})
 
         .state('admin', {
             url: '/admin',
