@@ -1,15 +1,31 @@
 <div class="col-lg-8">
-    <div class="panel panel-default">
+    <div class="panel panel-default main-panel">
         <div class="panel-heading">Main panel</div>
         <div class="panel-body">
             <path-chart data="sessionPathCtrl.flowGraph" clicked-point="sessionPathCtrl.clickedNode"></path-chart>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">High Drop-off</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in sessionPathCtrl.highDropOff">
+                    <span class="badge">{{item.drop}}</span>{{item.url}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Main Landings</div>
+            <div class="panel-body"></div>
         </div>
     </div>
 </div>
 
 <div class="col-lg-4">
 
-    <div class="panel panel-default">
+    <div class="panel panel-default configuration-panel">
         <div class="panel-heading">Configuration</div>
         <div class="panel-body">
             <form method="get" class="form-horizontal">
@@ -45,37 +61,43 @@
         </div>
     </div>
 
-
-    <div class="panel panel-default">
-        <div class="panel-heading">Detail 1</div>
-        <div class="panel-body">
-            <div ng-show="sessionPathCtrl.clickedNode">
-                <p><strong>{{sessionPathCtrl.clickedNode.url}}</strong></p>
-                <div class="col-sm-6">
-                    <p>Through traffic: {{sessionPathCtrl.clickedNode.in_degree}} </p>
-                    <p>Drop-offs: {{sessionPathCtrl.clickedNode.out_degree}}</p>
-                    <p>{{sessionPathCtrl.clickedNode.in_degree + sessionPathCtrl.clickedNode.out_degree}} Visits</p>
-                </div>
-                <div class="col-sm-6">
+    <div class="panel panel-default node-detail-panel">
+        <div class="panel-heading">Node Detail</div>
+        <table class="table table-hover">
+            <caption>{{sessionPathCtrl.clickedNode.url}}</caption>
+            <tr>
+                <th width="25%">Info</th>
+                <th width="25%">Value</th>
+                <th width="50%" rowspan="4">
                     <canvas id="pie" class="chart chart-pie" data="[sessionPathCtrl.clickedNode.in_degree, sessionPathCtrl.clickedNode.out_degree]"
                             labels="sessionPathCtrl.clickedNode.labels" colours="['#FF6666', '#0066CC']"></canvas>
-                </div>
-            </div>
-
-            <div ng-show="!sessionPathCtrl.clickedNode">
-                <p>[hover over a node]</p>
-            </div>
-
-        </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Through</th>
+                <td>{{sessionPathCtrl.clickedNode.in_degree}}</td>
+            </tr>
+            <tr>
+                <th>Drop-off</th>
+                <td>{{sessionPathCtrl.clickedNode.out_degree}}</th>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>{{sessionPathCtrl.clickedNode.in_degree + sessionPathCtrl.clickedNode.out_degree}}</td>
+            </tr>
+        </table>
     </div>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">Detail 2</div>
+    <div class="panel panel-default category-panel">
+        <div class="panel-heading">Category Level</div>
         <div class="panel-body">
-            <p>Knowledge Level</p>
-            <div class="checkbox" ng-repeat="item in sessionPathCtrl.knowledge.level1">
-                <label><input type="checkbox" value="{{item}}"/>{{item}}</label>
+            <div class="input-group" ng-repeat="item in sessionPathCtrl.knowledge.level1">
+                <span class="input-group-addon">
+                    <input type="checkbox" value="{{item}}"/>
+                </span>
+                <input type="text" class="form-control" value="{{item}}" disabled/>
             </div>
+
         </div>
     </div>
 </div>
