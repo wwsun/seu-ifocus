@@ -25,9 +25,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
-                <li><a ui-sref="admin" ui-sref-active="active">Admin</a></li>
-
                 <!--################################-->
+
                 <li class="dropdown">
                     <a ui-sref="status" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
                        role="button" aria-expanded="false">Overview <span class="caret"></span></a>
@@ -52,11 +51,10 @@
                 </li>
 
                 <li class="dropdown">
-                    <a ui-sref="#" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
+                    <a ui-sref="sessionPath" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
                        role="button" aria-expanded="false">Session Replay <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Path Analysis</a></li>
-                        <li><a href="#"></a></li>
+                        <li><a ui-sref="sessionPath" ui-sref-active="active">Path Analysis</a></li>
                         <li><a href="#">Search Engines</a></li>
                         <li><a href="#">Keywords</a></li>
                     </ul>
@@ -94,9 +92,8 @@
 
 <script src="js/controllers/MainCtrl.js"></script>
 <script src="js/controllers/StatusController.js"></script>
-<script src="js/controllers/AdminCtrl.js"></script>
 <script src="js/controllers/GeekCtrl.js"></script>
-
+<script src="js/controllers/SessionPathCtrl.js"></script>
 
 <script src="js/services/AdminService.js"></script>
 <script src="js/services/GeekService.js"></script>

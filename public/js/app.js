@@ -15,7 +15,7 @@ angular.module('sampleApp', [
     // --- CONTROLLERS ---
     'MainCtrl',
     'StatusCtrl',
-    'AdminCtrl',
-    'GeekCtrl'
+    'GeekCtrl',
+    'SessionCtrl'
 
 ]);
