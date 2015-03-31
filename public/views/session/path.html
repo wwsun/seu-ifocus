@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Main panel</div>
         <div class="panel-body">
-            <path-chart data="sessionPathCtrl.flowGraph" clicked-point="clickedNode"></path-chart>
+            <path-chart data="sessionPathCtrl.flowGraph" clicked-point="sessionPathCtrl.clickedNode"></path-chart>
         </div>
     </div>
 </div>
@@ -49,20 +49,20 @@
     <div class="panel panel-default">
         <div class="panel-heading">Detail 1</div>
         <div class="panel-body">
-            <div ng-show="clickedNode">
-                <p><strong>{{clickedNode.url}}</strong></p>
+            <div ng-show="sessionPathCtrl.clickedNode">
+                <p><strong>{{sessionPathCtrl.clickedNode.url}}</strong></p>
                 <div class="col-sm-6">
-                    <p>800 Through traffic(80%)</p>
-                    <p>200 Drop-offs(20%)</p>
-                    <p>1000 Visits</p>
+                    <p>Through traffic: {{sessionPathCtrl.clickedNode.in_degree}} </p>
+                    <p>Drop-offs: {{sessionPathCtrl.clickedNode.out_degree}}</p>
+                    <p>{{sessionPathCtrl.clickedNode.in_degree + sessionPathCtrl.clickedNode.out_degree}} Visits</p>
                 </div>
                 <div class="col-sm-6">
-                    <canvas id="pie" class="chart chart-pie" data="sessionPathCtrl.nodeDetail.data"
-                            labels="sessionPathCtrl.nodeDetail.labels" colours="['#FF6666', '#0066CC']"></canvas>
+                    <canvas id="pie" class="chart chart-pie" data="[sessionPathCtrl.clickedNode.in_degree, sessionPathCtrl.clickedNode.out_degree]"
+                            labels="sessionPathCtrl.clickedNode.labels" colours="['#FF6666', '#0066CC']"></canvas>
                 </div>
             </div>
 
-            <div ng-show="!clickedNode">
+            <div ng-show="!sessionPathCtrl.clickedNode">
                 <p>[hover over a node]</p>
             </div>
 

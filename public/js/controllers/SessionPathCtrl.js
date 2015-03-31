@@ -7,6 +7,7 @@ angular.module('SessionCtrl', []).controller('SessionPathController', function(g
     var vm = this;
     vm.$inject = ['graphData'];
 
+
     vm.tagline = 'This is the admin page';
 
     vm.knowledge = {
@@ -15,8 +16,9 @@ angular.module('SessionCtrl', []).controller('SessionPathController', function(g
 
     vm.flowGraph = graphData.flowData;
 
-    vm.nodeDetail = {
+    vm.clickedNode = {
         labels: ["Through", "Drop-off"],
-        data: [800, 200]
+        in_degree: 1,
+        out_degree: 1
     };
 });
