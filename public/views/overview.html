@@ -2,21 +2,23 @@
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-body text-center">
-                <h1>{{statusCtrl.currentUser}}</h1>
+                <h1>{{overviewCtrl.currentUser}}</h1>
+
                 <h3>people on this site now</h3>
             </div>
         </div>
 
         <div class="panel panel-default visit-trend">
             <h3>&nbsp;Visits Today</h3>
-            <div class="panel-body">
-                <canvas id="bar" class="chart chart-bar" data="statusCtrl.visitTrend" labels="statusCtrl.visitTrendLabels"></canvas>
-            </div>
 
-            <h3>&nbsp;Devices Distribution</h3>
+            <div class="panel-body">
+                <canvas id="bar" class="chart chart-bar" data="overviewCtrl.visitTrend"
+                        labels="overviewCtrl.visitTrendLabels"></canvas>
+            </div>
         </div>
 
         <div class="device-distribution">
+            <h3>&nbsp;Devices Distribution</h3>
             <div class="col-md-4 text-center devices">
                 <h3>Devices</h3>
             </div>
@@ -32,12 +34,22 @@
     </div>
 
     <div class="col-md-4">
+
+        <div class="btn-group range-select-btn-group" role="group">
+            <button type="button" class="btn btn-default">Day</button>
+            <button type="button" class="btn btn-default">Week</button>
+            <button type="button" class="btn btn-default">Month</button>
+        </div>
+
         <div class="panel panel-default top-20">
             <div class="panel-body">
                 <h4>Top 20</h4>
+
                 <p><em>Pages that people have visited this day</em></p>
-                <div ng-repeat="item in statusCtrl.top20">
+
+                <div ng-repeat="item in overviewCtrl.top20">
                     <p>{{item.url}}</p>
+
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
                              aria-valuemax="100" style="width: {{item.weight}}%;">

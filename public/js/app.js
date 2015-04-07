@@ -1,21 +1,21 @@
-angular.module('sampleApp', [
-    'ui.router',
-    'appRoutes',
+angular.module('ifocus', [
 
+    // --- 3rd Dependencies ---
+    'ui.router',
     'chart.js',
 
+    // --- ROUTERS ---
+    'ifocus.appRoutes',
+
     // --- DIRECTIVES ---
-    'chart.pie',
-    'chart.path',
+    'ifocus.visualDirectives',
 
     // --- SERVICES ---
-    'AdminService',
-    'GeekService',
+    'ifocus.sessionServices',
 
     // --- CONTROLLERS ---
-    'MainCtrl',
-    'StatusCtrl',
-    'AdminCtrl',
-    'GeekCtrl'
+    'ifocus.homeControllers',
+    'ifocus.overviewControllers',
+    'ifocus.sessionControllers'
 
 ]);

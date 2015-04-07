@@ -1,34 +1,31 @@
-angular.module('appRoutes', []).config(function($stateProvider, $urlRouterProvider) {
+angular.module('ifocus.appRoutes', [])
 
-    $urlRouterProvider.otherwise('/');
+    // angular-ui-router configuration
+    .config(function ($stateProvider, $urlRouterProvider) {
 
-    $stateProvider
-        .state('home', {
-            url: '/',
-            templateUrl: 'views/home.html',
-            controller: 'MainController as mainCtrl'
-        })
+        $urlRouterProvider.otherwise('/');
 
-        .state('status',{
-            url: '/status',
-            templateUrl: 'views/status.html',
-            controller: 'StatusController as statusCtrl'
-        })
+        $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: 'views/home.html',
+                controller: 'HomeCtrl as homeCtrl'
+            })
 
-        .state('admin', {
-            url: '/admin',
-            templateUrl: 'views/admin.html',
-            controller: 'AdminController as adminCtrl',
-            resolve: {
-                graphDataPromise: ['graphData', function(graphData) {
-                    return graphData.getAll();
-                }]
-            }
-        })
+            .state('status', {
+                url: '/status',
+                templateUrl: 'views/overview.html',
+                controller: 'OverviewCtrl as overviewCtrl'
+            })
 
-        .state('geeks', {
-            url: '/geeks',
-            templateUrl: 'views/geek.html',
-            controller: 'GeekController as geekCtrl'
-        });
-});
+            .state('sessionPath', {
+                url: '/session/path',
+                templateUrl: 'views/session/path.html',
+                controller: 'SessionPathCtrl as sessionPathCtrl',
+                resolve: {
+                    graphDataPromise: ['sessionPathData', function (sessionPathData) {
+                        return sessionPathData.getAll();
+                    }]
+                }
+            });
+    });
