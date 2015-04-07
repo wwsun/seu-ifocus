@@ -7,9 +7,6 @@ angular.module('ifocus.sessionControllers', [])
     .controller('SessionPathCtrl', function (sessionPathData) {
 
         var vm = this;
-        vm.$inject = ['sessionPathData'];
-
-        vm.tagline = 'This is the admin page';
 
         vm.knowledge = {
             level1: ['Homepage', 'Search', 'Product', 'Ad']
