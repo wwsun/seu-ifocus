@@ -1,7 +1,7 @@
-angular.module('chart.path', []).directive('pathChart', pathChart);
+angular.module('ifocus.visualDirectives', [])
 
-// todo: handle the click event
-// todo: resize to change the view level
+    .directive('pathChart', pathChart);
+
 
 function pathChart() {
     function link(scope, el, attr) {
@@ -104,7 +104,7 @@ function pathChart() {
 
         function nodeClickHandler(d) {
             // d is the data item for the current data/element pair
-            scope.$apply(function() {
+            scope.$apply(function () {
                 scope.clickedPoint = d;
             });
         }

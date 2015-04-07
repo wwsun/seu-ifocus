@@ -2,7 +2,7 @@
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-body text-center">
-                <h1>{{statusCtrl.currentUser}}</h1>
+                <h1>{{overviewCtrl.currentUser}}</h1>
 
                 <h3>people on this site now</h3>
             </div>
@@ -12,8 +12,8 @@
             <h3>&nbsp;Visits Today</h3>
 
             <div class="panel-body">
-                <canvas id="bar" class="chart chart-bar" data="statusCtrl.visitTrend"
-                        labels="statusCtrl.visitTrendLabels"></canvas>
+                <canvas id="bar" class="chart chart-bar" data="overviewCtrl.visitTrend"
+                        labels="overviewCtrl.visitTrendLabels"></canvas>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
 
                 <p><em>Pages that people have visited this day</em></p>
 
-                <div ng-repeat="item in statusCtrl.top20">
+                <div ng-repeat="item in overviewCtrl.top20">
                     <p>{{item.url}}</p>
 
                     <div class="progress">

@@ -1,10 +1,10 @@
-angular.module('StatusCtrl', ["chart.js"])
-    .controller('StatusController', function () {
+angular.module('ifocus.overviewControllers', ["chart.js"])
+
+    .controller('OverviewCtrl', function () {
 
         var vm = this;
 
         vm.currentUser = 998;
-
         vm.visitTrendLabels = ['0', '2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24'];
         vm.series = ['Visit Trends'];
 
