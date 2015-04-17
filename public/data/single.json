@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "url_index": "3020",
+      "url": "www.made-in-china.com/",
+      "semantics": "MIC英文首页",
+      "out_degree": 1,
+      "in_degree": 0,
+      "drop": 0,
+      "land": 0,
+      "name": 0
+    },
+    {
+      "url_index": "8177",
+      "url": "www.made-in-china.com/products/catlist/listsubcat/120/00/mic/Construction_Decoration.html",
+      "semantics": "一级目录页",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 1
+    },
+    {
+      "url_index": "6768",
+      "url": "tongyajituan.en.made-in-china.com/",
+      "semantics": "展示厅首页",
+      "out_degree": 3,
+      "in_degree": 0,
+      "drop": 0,
+      "land": 0,
+      "name": 2
+    },
+    {
+      "url_index": "6070",
+      "url": "tongyajituan.en.made-in-china.com/product-group/zqcxFINuXTUM/Artificial-Flowers-catalog-1.html",
+      "semantics": "产品组",
+      "out_degree": 3,
+      "in_degree": 3,
+      "drop": 0,
+      "land": 0,
+      "name": 3
+    },
+    {
+      "url_index": "6857",
+      "url": "www.made-in-china.com/products-search/hot-china-products/Flowers.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 6,
+      "in_degree": 0,
+      "drop": 0,
+      "land": 0,
+      "name": 4
+    },
+    {
+      "url_index": "1929",
+      "url": "yimeike.en.made-in-china.com/product/mKextvAuTEWa/China-Beautiful-Yiwu-Imitation-Flowers.html",
+      "semantics": "产品详情页",
+      "out_degree": 1,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 5
+    },
+    {
+      "url_index": "3557",
+      "url": "www.made-in-china.com/products-search/hot-china-products/Art_Flower.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 1,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 6
+    },
+    {
+      "url_index": "418",
+      "url": "www.made-in-china.com/products-search/find-china-products/0b0nolimit/Flowers-2.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 7
+    },
+    {
+      "url_index": "4395",
+      "url": "buildshion.en.made-in-china.com/product/ySoJCKOMSRVG/China-2014-New-Good-Quality-Handmade-Decorative-Artificial-Flower-BH121008-.html",
+      "semantics": "产品详情页",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 8
+    },
+    {
+      "url_index": "4848",
+      "url": "www.made-in-china.com/products-search/hot-china-products/Artificial_Flower.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 1,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 9
+    },
+    {
+      "url_index": "4867",
+      "url": "www.made-in-china.com/manufacturers/flowers-and-fruits.html",
+      "semantics": "QC词搜索公司",
+      "out_degree": 1,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 10
+    },
+    {
+      "url_index": "7571",
+      "url": "www.made-in-china.com/products-search/hot-china-products/Olive_Oil.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 1,
+      "in_degree": 0,
+      "drop": 0,
+      "land": 0,
+      "name": 11
+    },
+    {
+      "url_index": "3673",
+      "url": "www.made-in-china.com/products-search/find-china-products/0b0nolimit/Olive_Oil-2.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 12
+    },
+    {
+      "url_index": "4232",
+      "url": "yimeike.en.made-in-china.com/product-group/VeIxlvfMbpWb/Artificial-Flower-catalog-1.html",
+      "semantics": "产品组",
+      "out_degree": 1,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 13
+    },
+    {
+      "url_index": "6905",
+      "url": "www.made-in-china.com/products-search/find-china-products/0b0nolimit/Art_Flower-2.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 14
+    },
+    {
+      "url_index": "6735",
+      "url": "www.made-in-china.com/products-search/find-china-products/0b0nolimit/Artificial_Flower-2.html",
+      "semantics": "Hot Searches产品",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 15
+    },
+    {
+      "url_index": "3020",
+      "url": "www.made-in-china.com/",
+      "semantics": "MIC英文首页",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 16
+    },
+    {
+      "url_index": "1468",
+      "url": "tongyajituan.en.made-in-china.com/product/AoYQralbJBpZ/China-Wedding-Flowers-for-Bride.html",
+      "semantics": "产品详情页",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 17
+    },
+    {
+      "url_index": "3630",
+      "url": "tongyajituan.en.made-in-china.com/custom/JQJEnxmyGxLE/My-Video-1.html",
+      "semantics": "Company Show",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 18
+    },
+    {
+      "url_index": "7072",
+      "url": "tongyajituan.en.made-in-china.com/product/VeRQrKiSABYd/China-Long-Sterm-Artificial-Flowers.html",
+      "semantics": "产品详情页",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 19
+    },
+    {
+      "url_index": "4132",
+      "url": "yimeike.en.made-in-china.com/product-group/VeIxlvfMbpWb/Artificial-Flower-catalog-2.html",
+      "semantics": "产品组",
+      "out_degree": 0,
+      "in_degree": 1,
+      "drop": 0,
+      "land": 0,
+      "name": 20
+    }
+  ],
+  "links": [
+    {
+      "value": 1,
+      "source": 0,
+      "target": 1
+    },
+    {
+      "value": 3,
+      "source": 2,
+      "target": 3
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 5
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 6
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 7
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 8
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 9
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 10
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 12
+    },
+    {
+      "value": 1,
+      "source": 5,
+      "target": 13
+    },
+    {
+      "value": 1,
+      "source": 6,
+      "target": 14
+    },
+    {
+      "value": 1,
+      "source": 9,
+      "target": 15
+    },
+    {
+      "value": 1,
+      "source": 10,
+      "target": 16
+    },
+    {
+      "value": 1,
+      "source": 3,
+      "target": 17
+    },
+    {
+      "value": 1,
+      "source": 3,
+      "target": 18
+    },
+    {
+      "value": 1,
+      "source": 3,
+      "target": 19
+    },
+    {
+      "value": 1,
+      "source": 13,
+      "target": 20
+    }
+  ]
+}

@@ -78,7 +78,7 @@
                 <th width="25%">Value</th>
                 <th width="50%" rowspan="4">
                     <canvas id="pie" class="chart chart-pie"
-                            data="[sessionPathCtrl.clickedNode.in_degree, sessionPathCtrl.clickedNode.out_degree]"
+                            data="[sessionPathCtrl.clickedNode.in_degree, sessionPathCtrl.clickedNode.in_degree-sessionPathCtrl.clickedNode.out_degree]"
                             labels="sessionPathCtrl.clickedNode.labels" colours="['#FF6666', '#0066CC']"></canvas>
                 </th>
             </tr>
@@ -88,7 +88,7 @@
             </tr>
             <tr>
                 <th>Drop-off</th>
-                <td>{{sessionPathCtrl.clickedNode.out_degree}}
+                <td>{{sessionPathCtrl.clickedNode.in_degree-sessionPathCtrl.clickedNode.out_degree}}
                 </th>
             </tr>
             <tr>
