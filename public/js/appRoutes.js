@@ -27,5 +27,11 @@ angular.module('ifocus.appRoutes', [])
                         return sessionPathData.getAll();
                     }]
                 }
+            })
+
+            .state('sessionReplay', {
+                url: '/session/replay',
+                templateUrl: 'views/session/single-replay.html',
+                controller: 'SingleSessionReplayCtrl as replayCtrl'
             });
     });
