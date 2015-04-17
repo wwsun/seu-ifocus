@@ -17,4 +17,19 @@ angular.module('ifocus.sessionServices', [])
         };
 
         return obj;
+    }])
+
+    .factory('singleReplayData',['$http', function ($http) {
+
+        var obj = {
+            pathData: []
+        };
+
+        $http.get('data/single.json').success(function(data) {
+            angular.copy(data, obj.pathData);
+        }).error(function(data) {
+            console.log(data);
+        });
+
+        return obj;
     }]);
