@@ -15,6 +15,7 @@ angular.module('ifocus', [
 
     // --- CONTROLLERS ---
     'ifocus.homeControllers',
+    'ifocus.statusControllers',
     'ifocus.overviewControllers',
     'ifocus.sessionControllers'
 

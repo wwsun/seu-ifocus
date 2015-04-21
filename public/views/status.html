@@ -1,0 +1,181 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="row first-line">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Current Status</div>
+                    <div class="panel-body">
+                        <canvas id="line-day" class="chart chart-line" data="statusCtrl.today.data"
+                                labels="statusCtrl.today.labels" legend="true" series="statusCtrl.today.series"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Latest 7 Days Status</div>
+                    <div class="panel-body">
+                        <canvas id="line-week" class="chart chart-line" data="statusCtrl.week.data"
+                                labels="statusCtrl.week.labels" legend="true" series="statusCtrl.week.series"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row second-line">
+            <div class="col-md-6 user-interests-distribution">
+                <div class="panel panel-default">
+                    <div class="panel-heading">User Interests</div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in statusCtrl.interests.url | orderBy: '-dup'"
+                            ng-show="statusCtrl.interestsType == 'url'">
+                            <span class="badge">{{item.dup}}</span>
+                            {{item.name}}
+                        </li>
+                        <li class="list-group-item" ng-repeat="item in statusCtrl.interests.type | orderBy: '-dup'"
+                            ng-show="statusCtrl.interestsType == 'type'">
+                            <span class="badge">{{item.dup}}</span>
+                            {{item.name}}
+                        </li>
+                    </ul>
+
+                    <div class="panel-body">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-default" ng-click="statusCtrl.setDisplayType('url')">URL</button>
+                            <button class="btn btn-primary" ng-click="statusCtrl.setDisplayType('type')">Type</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">User Dwell Time Distribution</div>
+                    <div class="panel-body">
+                        <canvas class="chart chart-pie" data="statusCtrl.dwellTime.data"
+                                labels="statusCtrl.dwellTime.labels" legend="true"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row third-line">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">User sources</div>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in statusCtrl.userSources.source | orderBy: '-dup'"
+                                ng-show="statusCtrl.sourceType=='source'">
+                            <span class="badge">{{item.dup}}</span>
+                            {{item.name}}
+                        </li>
+                        <li class="list-group-item" ng-repeat="item in statusCtrl.userSources.landing | orderBy: '-dup'"
+                            ng-show="statusCtrl.sourceType=='landing'">
+                            <span class="badge">{{item.dup}}</span>
+                            {{item.name}}
+                        </li>
+                    </ul>
+
+                    <div class="panel-body">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-default" ng-click="statusCtrl.setSourceType('source')">Source</button>
+                            <button class="btn btn-primary" ng-click="statusCtrl.setSourceType('landing')">Landing</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 user-interests-distribution">
+                <div class="panel panel-default">
+                    <div class="panel-heading">User Interests</div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in statusCtrl.dropoff.url | orderBy: '-dup'"
+                            ng-show="statusCtrl.dropoffType == 'url'">
+                            <span class="badge">{{item.dup}}</span>
+                            {{item.name}}
+                        </li>
+                        <li class="list-group-item" ng-repeat="item in statusCtrl.dropoff.type | orderBy: '-dup'"
+                            ng-show="statusCtrl.dropoffType == 'type'">
+                            <span class="badge">{{item.dup}}</span>
+                            {{item.name}}
+                        </li>
+                    </ul>
+
+                    <div class="panel-body">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-default" ng-click="statusCtrl.setDropOffType('url')">URL</button>
+                            <button class="btn btn-primary" ng-click="statusCtrl.setDropOffType('type')">Type</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="row session-detail">
+            <div class="panel panel-default">
+                <div class="panel-heading">Session Processed Status</div>
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <h1>7289</h1>
+                        <p>sessions this day</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1>500</h1>
+                        <p>sessions right now</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1>320</h1>
+                        <p>errors happened</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row product-type-distribution">
+            <div class="panel panel-default">
+                <div class="panel-heading">Main Product Types that User Visited</div>
+                <div class="panel-body">
+                    <canvas class="chart chart-radar" data="statusCtrl.productTypeDistribution.data"
+                            labels="statusCtrl.productTypeDistribution.labels"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row frequent-pages">
+            <div class="panel panel-default">
+                <div class="panel-heading">Frequent Visited Pages</div>
+                <div class="panel-body">
+                    <p><em>Pages that people have visited frequently</em></p>
+
+                    <div ng-repeat="item in statusCtrl.frequentPages | orderBy: '-dup'">
+                        <p>{{item.name}}</p>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: {{item.dup}}%;">
+                                <span class="sr-only">{{item.dup}}% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row geo-distribution">
+            <div class="panel panel-default">
+                <div class="panel-heading">Geo Distribution of User Flow</div>
+                <div class="panel-body">
+                    <canvas class="chart chart-bar" data="statusCtrl.geoDistribution.data"
+                            labels="statusCtrl.geoDistribution.labels"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

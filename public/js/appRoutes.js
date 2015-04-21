@@ -14,6 +14,12 @@ angular.module('ifocus.appRoutes', [])
 
             .state('status', {
                 url: '/status',
+                templateUrl: 'views/status.html',
+                controller: 'StatusCtrl as statusCtrl'
+            })
+
+            .state('overview', {
+                url: '/overview',
                 templateUrl: 'views/overview.html',
                 controller: 'OverviewCtrl as overviewCtrl'
             })
