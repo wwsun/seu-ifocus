@@ -7,7 +7,7 @@ angular.module('ifocus.sessionServices', [])
         };
 
         obj.getAll = function () {
-            return $http.get('data/flow.json')
+            return $http.get('data/graph4.json')
                 .success(function (data) {
                     angular.copy(data, obj.flowData);
                 })
