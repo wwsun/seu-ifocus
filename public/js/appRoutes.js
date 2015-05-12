@@ -6,22 +6,40 @@ angular.module('ifocus.appRoutes', [])
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'views/home.html',
-                controller: 'HomeCtrl as homeCtrl'
-            })
-
             .state('status', {
                 url: '/status',
                 templateUrl: 'views/status.html',
                 controller: 'StatusCtrl as statusCtrl'
             })
 
-            .state('overview', {
-                url: '/overview',
-                templateUrl: 'views/overview.html',
-                controller: 'OverviewCtrl as overviewCtrl'
+            .state('audienceGeo', {
+                url: '/audience/geo',
+                templateUrl: 'views/audience/geo.html',
+                controller: 'AudienceGeoCtrl as audienceGeoCtrl'
+            })
+
+            .state('audienceSource', {
+                url: '/audience/source',
+                templateUrl: 'views/audience/source.html',
+                controller: 'AudienceSourceCtrl as audienceSourceCtrl'
+            })
+
+            .state('audienceLanding', {
+                url: '/audience/landing',
+                templateUrl: 'views/audience/landing.html',
+                controller: 'AudienceLandingCtrl as audienceLandingCtrl'
+            })
+
+            .state('audienceAge', {
+                url: '/audience/age',
+                templateUrl: 'views/audience/age.html',
+                controller: 'AudienceAgeCtrl as audienceAgeCtrl'
+            })
+            
+            .state('audienceFeature', {
+                url: '/audience/feature',
+                templateUrl: 'views/audience/feature.html',
+                controller: 'AudienceFeatureCtrl as audienceFeatureCtrl'
             })
 
             .state('sessionPath', {

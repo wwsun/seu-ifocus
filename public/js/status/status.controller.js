@@ -1,4 +1,4 @@
-angular.module('ifocus.statusControllers', ['chart.js'])
+angular.module('ifocus.status', ['chart.js'])
 
     .controller('StatusCtrl', function () {
 

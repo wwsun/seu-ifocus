@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-6 geo-country-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Main Country Distribution</div>
+            <div class="panel-body">
+                <canvas id="bar" class="chart chart-bar" data="audienceGeoCtrl.geoDistribution.data"
+                        labels="audienceGeoCtrl.geoDistribution.labels" legend="true"
+                        series="audienceGeoCtrl.geoDistribution.series"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 country-session-trend">
+        <div class="panel panel-default">
+            <div class="panel-heading">Panel heading without title</div>
+            <div class="panel-body">
+                <canvas id="line" class="chart chart-line" data="audienceGeoCtrl.mainCountriesTrend.data"
+                        labels="audienceGeoCtrl.mainCountriesTrend.labels" legend="true"
+                        series="audienceGeoCtrl.mainCountriesTrend.series">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 top-country-table">
+        <div class="panel panel-default">
+            <div class="panel-heading">Geo Detail Table</div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Sessions</th>
+                    <th>Bounce Rate</th>
+                    <th>pages/session</th>
+                    <th>Avg Session Duration</th>
+                    <th>Goal Conversion Rate</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in audienceGeoCtrl.geoDistributionDetail">
+                    <td>{{item.name}}</td>
+                    <td>{{item.sessions}}</td>
+                    <td>{{item.bounce}}</td>
+                    <td>{{item.pages}}</td>
+                    <td>{{item.avgduration}}%</td>
+                    <td>{{item.goal}}%</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

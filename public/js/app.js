@@ -10,13 +10,17 @@ angular.module('ifocus', [
     // --- DIRECTIVES ---
     'ifocus.visualDirectives',
 
+    // --- Modules ---
+    'ifocus.status',
+    'ifocus.audience',
+
     // --- SERVICES ---
     'ifocus.sessionServices',
 
     // --- CONTROLLERS ---
-    'ifocus.homeControllers',
-    'ifocus.statusControllers',
-    'ifocus.overviewControllers',
+    //'ifocus.homeControllers',
+    //'ifocus.statusControllers',
+    //'ifocus.overviewControllers',
     'ifocus.sessionControllers'
 
 ]);
