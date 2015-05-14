@@ -12,7 +12,7 @@
 
     <div class="col-md-6 country-session-trend">
         <div class="panel panel-default">
-            <div class="panel-heading">Panel heading without title</div>
+            <div class="panel-heading">Session Trends of Main Countries</div>
             <div class="panel-body">
                 <canvas id="line" class="chart chart-line" data="audienceGeoCtrl.mainCountriesTrend.data"
                         labels="audienceGeoCtrl.mainCountriesTrend.labels" legend="true"
@@ -41,11 +41,11 @@
                 <tbody>
                 <tr ng-repeat="item in audienceGeoCtrl.geoDistributionDetail">
                     <td>{{item.name}}</td>
-                    <td>{{item.sessions}}</td>
-                    <td>{{item.bounce}}</td>
-                    <td>{{item.pages}}</td>
-                    <td>{{item.avgduration}}%</td>
-                    <td>{{item.goal}}%</td>
+                    <td>{{item.dup}}</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
                 </tr>
                 </tbody>
             </table>

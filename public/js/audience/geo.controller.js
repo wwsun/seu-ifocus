@@ -1,6 +1,7 @@
 angular.module('ifocus.audience', ['chart.js'])
 
-    .controller('AudienceGeoCtrl', function() {
+    .constant('baseUrl', 'http://223.3.66.57:8088/vislog-restful/api/')
+    .controller('AudienceGeoCtrl', function($http, baseUrl) {
         var vm = this;
 
         vm.geoDistribution = {
@@ -20,17 +21,27 @@ angular.module('ifocus.audience', ['chart.js'])
         };
 
         vm.geoDistributionDetail = [
-            {name:'China', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'India', sessions: 220, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'USA', sessions: 330, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'Taiwan', sessions: 340, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'Hongkong', sessions: 320, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'Japan', sessions: 310, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'c4', sessions: 100, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'c5', sessions: 200, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'c6', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'c7', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0},
-            {name:'c8', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0}
+            //{name:'China', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'India', sessions: 220, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'USA', sessions: 330, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'Taiwan', sessions: 340, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'Hongkong', sessions: 320, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'Japan', sessions: 310, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'c4', sessions: 100, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'c5', sessions: 200, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'c6', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'c7', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0},
+            //{name:'c8', sessions: 300, bounce: '30%', pages:4, avgduration: 3, goal:0}
         ];
 
+        // todo: C
+        vm.getCountryDistribution = function () {
+            $http.jsonp(baseUrl + 'sessions/overview/sources/countries').success(function (data) {
+                //console.log(data);
+                vm.geoDistributionDetail = data;
+            });
+        };
+
+
+        vm.getCountryDistribution();
     });

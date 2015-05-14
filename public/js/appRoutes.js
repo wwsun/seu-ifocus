@@ -42,6 +42,12 @@ angular.module('ifocus.appRoutes', [])
                 controller: 'AudienceFeatureCtrl as audienceFeatureCtrl'
             })
 
+            .state('audienceEvent', {
+                url: '/audience/event',
+                templateUrl: 'views/audience/event.html',
+                controller: 'AudienceEventCtrl as audienceEventCtrl'
+            })
+
             .state('sessionPath', {
                 url: '/session/path',
                 templateUrl: 'views/session/path.html',

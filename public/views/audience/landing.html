@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-6 landing-categories">
+        <div class="panel panel-default">
+            <div class="panel-heading">Main Landing Categories</div>
+            <div class="panel-body">
+                <canvas id="radar" class="chart chart-radar" data="audienceLandingCtrl.landingCategories.data"
+                        labels="audienceLandingCtrl.landingCategories.labels"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 landing-pages">
+        <div class="panel panel-default">
+            <div class="panel-heading">Top Landing Pages</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in audienceLandingCtrl.landingPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 landing-ref-top20">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Main Landing Referers</div>
+            <div class="list-group">
+                <a class="list-group-item" ng-repeat="item in audienceLandingCtrl.landingRefers"
+                   ng-click="audienceLandingCtrl.getLandingResultByRef(item.url)">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 selected-url-list">
+        <div class="panel panel-default">
+            <div class="panel-heading">Main Landing Referers</div>
+            <div class="list-group">
+                <a class="list-group-item" ng-repeat="item in audienceLandingCtrl.selectedRefLanding.landingPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 selected-categories">
+        <div class="panel panel-default">
+            <div class="panel-heading">Category Distribution</div>
+            <div class="panel-body">
+                <canvas class="chart chart-radar" data="audienceLandingCtrl.selectedRefLanding.landingCategories.data"
+                        labels="audienceLandingCtrl.selectedRefLanding.landingCategories.labels"></canvas>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in audienceLandingCtrl.selectedRefLanding.landingPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
