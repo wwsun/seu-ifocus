@@ -3,7 +3,7 @@ angular.module('ifocus.appRoutes', [])
     // angular-ui-router configuration
     .config(function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/status');
 
         $stateProvider
             .state('status', {
@@ -46,6 +46,30 @@ angular.module('ifocus.appRoutes', [])
                 url: '/audience/event',
                 templateUrl: 'views/audience/event.html',
                 controller: 'AudienceEventCtrl as audienceEventCtrl'
+            })
+
+            .state('trafficSource', {
+                url: '/traffic/source',
+                templateUrl: 'views/traffic/source.html',
+                controller: 'TrafficSourceCtrl as trafficSourceCtrl'
+            })
+
+            .state('trafficPath', {
+                url: '/traffic/path',
+                templateUrl: 'views/traffic/path.html',
+                controller: 'TrafficPathCtrl as trafficPathCtrl'
+            })
+
+            .state('trafficBounce', {
+                url: '/traffic/bounce',
+                templateUrl: 'views/traffic/bounce.html',
+                controller: 'TrafficBounceCtrl as trafficBounceCtrl'
+            })
+
+            .state('trafficConversion', {
+                url: '/traffic/conversion',
+                templateUrl: 'views/traffic/conversion.html',
+                controller: 'TrafficConversionCtrl as trafficConversionCtrl'
             })
 
             .state('sessionPath', {

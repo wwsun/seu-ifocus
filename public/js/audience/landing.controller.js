@@ -29,8 +29,10 @@ angular.module('ifocus.audience')
             {url:'yahoo.com', dup: 300}
         ];
 
-        // add business logic
+
         vm.getLandingResultByRef = function(url) {
+
+            // todo: add business logic for method getLandingResultByRef::url
 
             vm.selectedRefLanding = {
                 landingPages: [
@@ -45,7 +47,7 @@ angular.module('ifocus.audience')
                     labels: ['Car','watch','LCD','Pet','Supplier', 'Mobile Phone'],
                     data: [[65, 90, 81, 44, 120, 50]]
                 }
-            }
+            };
 
         };
 

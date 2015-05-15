@@ -85,10 +85,10 @@
                     <li>
                         <a href="#"><i class="fa fa-bus fa-fw"></i> 流量<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="" href="#">流量来源</a></li>
-                            <li><a href="#">路径分析</a></li>
-                            <li><a href="#">跳出率</a></li>
-                            <li><a href="#">转化率</a></li>
+                            <li><a ui-sref="trafficSource" ui-sref-active="active">流量来源</a></li>
+                            <li><a ui-sref="trafficPath" ui-sref-active="active">路径分析</a></li>
+                            <li><a ui-sref="trafficBounce" ui-sref-active="active">跳出率</a></li>
+                            <li><a ui-sref="trafficConversion" ui-sref-active="active">转化率</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -148,6 +148,7 @@
 
 <script src="js/status/status.controller.js"></script>
 
+<!--Module Audience-->
 <script src="js/audience/geo.controller.js"></script>
 <script src="js/audience/source.controller.js"></script>
 <script src="js/audience/landing.controller.js"></script>
@@ -155,8 +156,13 @@
 <script src="js/audience/feature.controller.js"></script>
 <script src="js/audience/event.controller.js"></script>
 
-<!--<script src="js/controllers/home.controller.js"></script>-->
-<!--<script src="js/controllers/overview.controller.js"></script>-->
+<!--Module Traffic-->
+<script src="js/traffic/source.controller.js"></script>
+<script src="js/traffic/path.controller.js"></script>
+<script src="js/traffic/conversion.controller.js"></script>
+<script src="js/traffic/bounce.controller.js"></script>
+
+
 <script src="js/controllers/session.controller.js"></script>
 
 <script src="js/services/session.service.js"></script>
