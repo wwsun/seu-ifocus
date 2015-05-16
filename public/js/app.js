@@ -13,6 +13,7 @@ angular.module('ifocus', [
     // --- Modules ---
     'ifocus.status',
     'ifocus.audience',
+    'ifocus.traffic',
 
     // --- SERVICES ---
     'ifocus.sessionServices',

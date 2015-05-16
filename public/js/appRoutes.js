@@ -57,7 +57,12 @@ angular.module('ifocus.appRoutes', [])
             .state('trafficPath', {
                 url: '/traffic/path',
                 templateUrl: 'views/traffic/path.html',
-                controller: 'TrafficPathCtrl as trafficPathCtrl'
+                controller: 'TrafficPathCtrl as trafficPathCtrl',
+                resolve: {
+                    graphDataPromise: ['sessionPathData', function (sessionPathData) {
+                        return sessionPathData.getAll();
+                    }]
+                }
             })
 
             .state('trafficBounce', {

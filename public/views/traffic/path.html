@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-md-8 left">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <path-chart data="trafficPathCtrl.flowGraph" clicked-point="trafficPathCtrl.clickedNode"></path-chart>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">High Drop-off</div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="item in trafficPathCtrl.hotpage.highdrop">
+                        <span class="badge">{{item.drop}}</span>{{item.url}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Main Landings</div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="landing in trafficPathCtrl.hotpage.mainland">
+                        <span class="badge">{{landing.land}}</span>{{landing.url}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 right">
+
+        <div class="panel panel-default configuration-panel">
+            <div class="panel-heading">Configuration</div>
+            <div class="panel-body">
+                <form method="get" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Start date</label>
+
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">End date</label>
+
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Argument</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="argument1"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-default">Add argument</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default node-detail-panel">
+            <div class="panel-heading">Node Detail</div>
+            <table class="table table-hover">
+                <caption>{{trafficPathCtrl.clickedNode.url}}</caption>
+                <tr>
+                    <th width="25%">Info</th>
+                    <th width="25%">Value</th>
+                    <th width="50%" rowspan="4">
+                        <canvas id="pie" class="chart chart-pie"
+                                data="[trafficPathCtrl.clickedNode.in_degree, trafficPathCtrl.clickedNode.in_degree-trafficPathCtrl.clickedNode.out_degree]"
+                                labels="trafficPathCtrl.clickedNode.labels" colours="['#FF6666', '#0066CC']"></canvas>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Through</th>
+                    <td>{{trafficPathCtrl.clickedNode.in_degree}}</td>
+                </tr>
+                <tr>
+                    <th>Drop-off</th>
+                    <td>{{trafficPathCtrl.clickedNode.in_degree-trafficPathCtrl.clickedNode.out_degree}}
+                    </th>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td>{{sessionPathCtrl.clickedNode.in_degree + sessionPathCtrl.clickedNode.out_degree}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
