@@ -24,4 +24,6 @@ angular.module('ifocus', [
     //'ifocus.overviewControllers',
     'ifocus.sessionControllers'
 
-]);
+])
+
+    .constant('baseUrl', 'http://223.3.66.57:8080/vislog-restful/api/');

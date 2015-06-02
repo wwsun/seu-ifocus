@@ -1,14 +1,21 @@
 angular.module('ifocus.status', ['chart.js'])
 
-    .controller('StatusCtrl', function () {
+    .controller('StatusCtrl', ['StatusService', function (StatusService) {
 
         var vm = this;
 
+        StatusService.getOverviewStatusNumbers('2014-08-10')
+            .success(function (response) {
+                console.log(response);
+                vm.statusNumbers = response.data;
+            });
+
+
         // mock data todo: using RESTfull call
         vm.today = {
-            labels: [0,2,4,6,8,10,12,14,16,18,20,22,24],
+            labels: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
             series: ['visits'],
-            data: [[20,30,40,50,30,20,60,20,20,10,20,50,10]]
+            data: [[20, 30, 40, 50, 30, 20, 60, 20, 20, 10, 20, 50, 10]]
         };
 
         // mock data todo: using RESTful call
@@ -21,12 +28,12 @@ angular.module('ifocus.status', ['chart.js'])
         // mock data todo: using RESTful call
         vm.interests = {
             url: [
-                {name:'/', dup: 200},
-                {name:'/search', dup: 100}
+                {name: '/', dup: 200},
+                {name: '/search', dup: 100}
             ],
             type: [
-                {name:'home', dup: 200},
-                {name:'search', dup: 300}
+                {name: 'home', dup: 200},
+                {name: 'search', dup: 300}
             ]
         };
 
@@ -40,14 +47,14 @@ angular.module('ifocus.status', ['chart.js'])
         // todo: using real data
         vm.userSources = {
             source: [
-                {name:'baidu.com', dup: 200},
-                {name:'google.com', dup: 500},
-                {name:'sogou.com', dup: 100}
+                {name: 'baidu.com', dup: 200},
+                {name: 'google.com', dup: 500},
+                {name: 'sogou.com', dup: 100}
             ],
             landing: [
-                {name:'/', dup: 200},
-                {name:'/product/a', dup: 300},
-                {name:'/product/b', dup: 200}
+                {name: '/', dup: 200},
+                {name: '/product/a', dup: 300},
+                {name: '/product/b', dup: 200}
             ]
         };
 
@@ -67,7 +74,7 @@ angular.module('ifocus.status', ['chart.js'])
 
         // todo: using real data
         vm.productTypeDistribution = {
-            labels: ['Car','watch','LCD','Pet','Allure'],
+            labels: ['Car', 'watch', 'LCD', 'Pet', 'Allure'],
             data: [[65, 59, 90, 81, 44]]
         };
 
@@ -90,22 +97,22 @@ angular.module('ifocus.status', ['chart.js'])
         vm.sourceType = 'source';
         vm.dropoffType = 'type';
 
-        vm.setDisplayType = function(type) {
-            if (type==='type' || type==='url') {
+        vm.setDisplayType = function (type) {
+            if (type === 'type' || type === 'url') {
                 vm.interestsType = type;
             }
         };
 
         vm.setDropOffType = function (type) {
-            if (type==='type' || type==='url') {
+            if (type === 'type' || type === 'url') {
                 vm.dropoffType = type;
             }
         };
 
-        vm.setSourceType = function(type) {
-            if (type==='source' || type==='landing') {
+        vm.setSourceType = function (type) {
+            if (type === 'source' || type === 'landing') {
                 vm.sourceType = type;
             }
         };
 
-    });
+    }]);
