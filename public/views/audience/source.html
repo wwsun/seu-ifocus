@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-4 browser-distribution">
         <div class="panel panel-default">
-            <div class="panel-heading">Devices Distribution (week)</div>
+            <div class="panel-heading">Browser Distribution (week)</div>
             <div class="panel-body">
                 <canvas class="chart chart-doughnut" data="audienceSourceCtrl.browserDistribution.data"
                         labels="audienceSourceCtrl.browserDistribution.labels" legend="true"></canvas>
@@ -28,29 +28,27 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-md-8 referer-pages">
         <div class="panel panel-default">
-            <div class="panel-heading">Devices Distribution (week)</div>
+            <div class="panel-heading">Main Referrer Sources</div>
             <table class="table">
                 <thead>
                 <tr>
                     <th>#</th>
                     <th>url</th>
-                    <th>date</th>
-                    <th>target</th>
+                    <th>dup</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="item in audienceSourceCtrl.refererList">
+                <tr ng-repeat="item in audienceSourceCtrl.referrerSources">
                     <td>{{$index}}</td>
-                    <td>{{item.url}}</td>
-                    <td>{{item.date}}</td>
-                    <td>{{item.target}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.dup}}</td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="col-md-4 device-percentage"></div>
 </div>

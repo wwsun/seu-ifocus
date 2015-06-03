@@ -1,31 +1,51 @@
 angular.module('ifocus.audience')
 
-    .controller('AudienceSourceCtrl', function() {
+    .controller('AudienceSourceCtrl', ['AudienceService', 'StatusService', function (AudienceService, StatusService) {
         var vm = this;
 
-        vm.deviceDistribution = {
-            labels: ['Desktop', 'Tablet', 'Mobile'],
-            data:[500, 320, 100]
-        };
+        AudienceService.getDevicesDistribution()
+            .success(function (data) {
+                var devices = {labels: [], data: []};
 
-        vm.browserDistribution = {
-            labels: ['IE', 'Chrome', 'Firefox', 'Safari'],
-            data:[50, 30, 5, 15]
-        };
+                var i,
+                    n;
 
-        vm.searchEngineDistribution = {
-            labels: ['Google', 'Baidu', 'Bing', 'Yahoo'],
-            data:[50, 10, 15, 25]
-        };
+                for (i = 0, n = data.length; i < n; i++) {
+                    devices.labels.push(data[i]['device']);
+                    devices.data.push(data[i]['sum']);
+                }
 
-        vm.refererList = [
-            {url:'http://google.com',date:'2013-14-122',target:'/'},
-            {url:'http://google.com',date:'2013-14-122',target:'/search'},
-            {url:'http://baidu.com',date:'2013-14-122',target:'/ad'},
-            {url:'http://google.com',date:'2013-14-122',target:'/product'},
-            {url:'http://bing.com',date:'2013-14-122',target:'/search'},
-            {url:'http://foourl.com',date:'2013-14-122',target:'/'},
-            {url:'http://google.com',date:'2013-14-122',target:'/comp'},
-            {url:'http://webapp.com',date:'2013-14-122',target:'/detail'}
-        ];
-    });
+                vm.deviceDistribution = devices;
+            });
+
+        AudienceService.getBrowsersDistribution()
+            .success(function (data) {
+                var browsers = {labels: [], data: []};
+
+                var i,
+                    n;
+
+                for (i = 0, n = data.length; i < n; i++) {
+                    browsers.labels.push(data[i]['browser']);
+                    browsers.data.push(data[i]['sum']);
+                }
+
+                vm.browserDistribution = browsers;
+            });
+
+        StatusService.getRefererSearchEngines()
+            .success(function (data) {
+                var searchEngines = {labels: [], data: []};
+
+                var i,
+                    n;
+
+                for (i = 0, n = data.length; i < n && i < 4; i++) {
+                    searchEngines.labels.push(data[i]['name']);
+                    searchEngines.data.push(data[i]['dup']);
+                }
+
+                vm.searchEngineDistribution = searchEngines;
+                vm.referrerSources = data;
+            });
+    }]);

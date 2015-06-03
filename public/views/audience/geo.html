@@ -40,12 +40,12 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in audienceGeoCtrl.geoDistributionDetail">
-                    <td>{{item.name}}</td>
-                    <td>{{item.dup}}</td>
-                    <td>0</td>
-                    <td>3</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{item.country}}</td>
+                    <td>{{item.sessions | number}}</td>
+                    <td>{{item.bounceRate | number}}</td>
+                    <td>{{item.avgPages | number}}</td>
+                    <td>{{item.avgDuration | number}}</td>
+                    <td>{{item.goalConversion | number}}</td>
                 </tr>
                 </tbody>
             </table>
