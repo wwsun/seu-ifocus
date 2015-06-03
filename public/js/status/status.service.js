@@ -19,23 +19,23 @@ angular.module('ifocus.status')
                 return $http.get(baseUrl + 'overview/sessions/sources/countries');
             },
 
-            getFrequentCategories: function() {
+            getFrequentCategories: function () {
                 return $http.get(baseUrl + 'overview/sessions/frequent/categories');
             },
 
-            getFrequentPages: function() {
+            getFrequentPages: function () {
                 return $http.get(baseUrl + "overview/sessions/frequent/pages");
             },
 
-            getFrequentPagesByCategory: function(category) {
+            getFrequentPagesByCategory: function (category) {
                 return $http.get(baseUrl + "overview/sessions/frequent/" + category);
             },
 
-            getMainLandingCategories: function() {
+            getMainLandingCategories: function () {
                 return $http.get(baseUrl + 'overview/sessions/landings/categories');
             },
 
-            getMainDropOffCategories: function() {
+            getMainDropOffCategories: function () {
                 return $http.get(baseUrl + 'overview/sessions/dropoff/categories');
             }
 

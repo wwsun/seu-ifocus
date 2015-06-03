@@ -92,8 +92,6 @@ angular.module('ifocus.status', ['chart.js'])
 
         StatusService.getMainDropOffCategories()
             .success(function (data) {
-
-                console.log(data);
                 var dropoff = {labels: [], series: ['main dropoff categories'], data: [[]]}; // pie
 
                 var i,
