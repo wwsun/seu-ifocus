@@ -3,7 +3,7 @@ angular.module('ifocus.status')
     .factory('StatusService', ['$http', 'baseUrl', function ($http, baseUrl) {
 
         return {
-            getSessionDistribution: function (date) {
+            getSessionDistributionByDate: function (date) {
                 return $http.get(baseUrl + 'overview/distribution/' + date);
             },
 
