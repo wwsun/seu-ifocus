@@ -6,11 +6,11 @@ angular.module('ifocus.traffic')
                 return $http.get(baseUrl + "visitflow/path/" + date);
             },
 
-            getPathById: function (id) {
+            getPathBySessionId: function (id) {
                 return $http.get(baseUrl + "visitflow/path/id/" + id);
             },
 
-            getSessionSequenceById: function (id) {
+            getSessionSequenceBySessionId: function (id) {
                 return $http.get(baseUrl + "visitflow/sequence/id/" + id);
             }
         };

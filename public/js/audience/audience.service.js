@@ -2,6 +2,13 @@ angular.module('ifocus.audience')
     .factory('AudienceService', ['$http', 'baseUrl', function ($http, baseUrl) {
 
         return {
+
+            getCategoryList: function () {
+
+                // todo: get category list from server
+                return $http.get(baseUrl + '');
+            },
+
             getDistributionByCountry: function(country) {
                 return $http.get(baseUrl + 'customer/geo/distribution/' + country);
             },

@@ -11,8 +11,8 @@ angular.module('ifocus.audience')
                     n;
 
                 for (i = 0, n = data.length; i < n; i++) {
-                    devices.labels.push(data[i]['device']);
-                    devices.data.push(data[i]['sum']);
+                    devices.labels.push(data[i].device);
+                    devices.data.push(data[i].sum);
                 }
 
                 vm.deviceDistribution = devices;
@@ -26,8 +26,8 @@ angular.module('ifocus.audience')
                     n;
 
                 for (i = 0, n = data.length; i < n; i++) {
-                    browsers.labels.push(data[i]['browser']);
-                    browsers.data.push(data[i]['sum']);
+                    browsers.labels.push(data[i].browser);
+                    browsers.data.push(data[i].sum);
                 }
 
                 vm.browserDistribution = browsers;
@@ -41,8 +41,8 @@ angular.module('ifocus.audience')
                     n;
 
                 for (i = 0, n = data.length; i < n && i < 4; i++) {
-                    searchEngines.labels.push(data[i]['name']);
-                    searchEngines.data.push(data[i]['dup']);
+                    searchEngines.labels.push(data[i].name);
+                    searchEngines.data.push(data[i].dup);
                 }
 
                 vm.searchEngineDistribution = searchEngines;

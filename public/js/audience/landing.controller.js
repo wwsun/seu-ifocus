@@ -1,54 +1,34 @@
 angular.module('ifocus.audience')
 
-    .controller('AudienceLandingCtrl', function() {
+    .controller('AudienceLandingCtrl', ['AudienceService', 'StatusService', function (AudienceService, StatusService) {
         var vm = this;
 
-        vm.landingCategories = {
-            labels: ['Car','watch','LCD','Pet','Allure', 'Supplier', 'Mobile Phone'],
-            data: [[65, 59, 90, 81, 44, 120, 50]]
-        };
+        StatusService.getMainLandingCategories()
+            .success(function (data) {
 
-        vm.landingPages = [
-            {url:'/', dup: 1000},
-            {url:'/search', dup: 900},
-            {url:'/category', dup: 400},
-            {url:'/product', dup: 330},
-            {url:'/ad', dup: 220},
-            {url:'/product1', dup: 100},
-            {url:'/ad2', dup: 100},
-            {url:'/ad2', dup: 10},
-            {url:'/ad2', dup: 10},
-            {url:'/ad2', dup: 10}
-        ];
+                var landing = {labels: [], series: ['main landing categories'], data: []}; // pie
 
-        vm.landingRefers = [
-            {url:'google.com', dup: 1000},
-            {url:'baidu.com', dup: 900},
-            {url:'-', dup: 800},
-            {url:'bing.com', dup: 400},
-            {url:'yahoo.com', dup: 300}
-        ];
+                var i,
+                    n;
 
-
-        vm.getLandingResultByRef = function(url) {
-
-            // todo: add business logic for method getLandingResultByRef::url
-
-            vm.selectedRefLanding = {
-                landingPages: [
-                    {url:'/category', dup: 400},
-                    {url:'/product', dup: 330},
-                    {url:'/ad', dup: 220},
-                    {url:'/product1', dup: 100},
-                    {url:'/ad2', dup: 100},
-                    {url:'/ad2', dup: 10}
-                ],
-                landingCategories: {
-                    labels: ['Car','watch','LCD','Pet','Supplier', 'Mobile Phone'],
-                    data: [[65, 90, 81, 44, 120, 50]]
+                for (i = 0, n = data.length; i < n; i++) {
+                    landing.labels.push(data[i].name);
+                    landing.data.push(data[i].dup);
                 }
-            };
 
+                vm.landingCategories = landing;
+                vm.landingCategoryList = data;
+
+            });
+
+
+        vm.getLandingResultByCategory = function (categoryName) {
+
+            AudienceService.getLandingPagesByCategory(categoryName)
+                .success(function (data) {
+                    // todo: no data from service
+                    vm.selectedLandingPages = data;
+                });
         };
 
-    });
+    }]);
