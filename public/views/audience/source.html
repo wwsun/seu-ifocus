@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-4 devices-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Devices Distribution (week)</div>
+            <div class="panel-body">
+                <canvas class="chart chart-doughnut" data="audienceSourceCtrl.deviceDistribution.data"
+                        labels="audienceSourceCtrl.deviceDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 browser-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Browser Distribution (week)</div>
+            <div class="panel-body">
+                <canvas class="chart chart-doughnut" data="audienceSourceCtrl.browserDistribution.data"
+                        labels="audienceSourceCtrl.browserDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 search-engine-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Search Engine Distribution (week)</div>
+            <div class="panel-body">
+                <canvas class="chart chart-doughnut" data="audienceSourceCtrl.searchEngineDistribution.data"
+                        labels="audienceSourceCtrl.searchEngineDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 referer-pages">
+        <div class="panel panel-default">
+            <div class="panel-heading">Main Referrer Sources</div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>url</th>
+                    <th>dup</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in audienceSourceCtrl.referrerSources">
+                    <td>{{$index}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.dup}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

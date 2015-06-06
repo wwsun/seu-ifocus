@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-md-4 overview-status">
+        <div class="panel panel-default">
+            <div class="panel-heading">Overview Status</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="audienceEventCtrl.overviewDistribution.data"
+                        labels="audienceEventCtrl.overviewDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-4 config-query">
+        <div class="panel panel-default">
+            <div class="panel-heading">Hot Pages by Semantics</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in audienceEventCtrl.hotPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="col-md-4 config-level-select">
+        <div class="panel panel-default">
+            <div class="panel-heading">Semantics Selection</div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label>First Level Semantics</label>
+                    <select name="first-level" class="form-control">
+                        <option value="home">Industrial Supplies</option>
+                        <option value="home">Consumer Goods</option>
+                        <option value="home">Raw Material</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Second Level Semantics</label>
+                    <select name="second-level" class="form-control">
+                        <option value="home">Car Maintenance</option>
+                        <option value="home">Auto Filter</option>
+                        <option value="home">Rope Light</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Url</label>
+                        <div class="col-sm-11">
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+
+                    <div class=form-group>
+                        <div class="col-sm-offset-1 col-sm-11">
+                            <button class="btn btn-success">Analysis</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4 click-event">
+        <div class="panel panel-default">
+            <div class="panel-heading">Click Events</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="audienceEventCtrl.clickDistribution.data"
+                        labels="audienceEventCtrl.clickDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 mouse-event">
+        <div class="panel panel-default">
+            <div class="panel-heading">Mouse Events</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="audienceEventCtrl.mouseDistribution.data"
+                        labels="audienceEventCtrl.mouseDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 scroll-event">
+        <div class="panel panel-default">
+            <div class="panel-heading">Scroll Events</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="audienceEventCtrl.scrollDistribution.data"
+                        labels="audienceEventCtrl.scrollDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-6 bounce-trend">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Key Numbers</div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <h1>{{trafficBounceCtrl.trafficBounceNumbers.firstVisitBounceRate}}%</h1>
+                    <p>First Visit Bounce Rate</p>
+                </div>
+                <div class="col-md-4">
+                    <h1>{{trafficBounceCtrl.trafficBounceNumbers.homepageBouneRate}}%</h1>
+                    <p>Homepage Visit Bounce Rate</p>
+                </div>
+                <div class="col-md-4">
+                    <h1>{{trafficBounceCtrl.trafficBounceNumbers.searchPageBounceRate}}%</h1>
+                    <p>Search Page Bounce Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Bounce Trends in Seven Days</div>
+            <div class="panel-body">
+                <canvas class="chart chart-line" data="trafficBounceCtrl.trafficBounceTrends.data"
+                        labels="trafficBounceCtrl.trafficBounceTrends.labels" legend="true"
+                        series="trafficBounceCtrl.trafficBounceTrends.series">
+                </canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 key-bounce-pages">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Bounce Distribution</div>
+            <div class="panel-body">
+                <canvas class="chart chart-radar" data="trafficBounceCtrl.mainBounceCategory.data"
+                        labels="trafficBounceCtrl.mainBounceCategory.labels"></canvas>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Main Bounce Pages</div>
+            <div class="list-group">
+                <a class="list-group-item" ng-repeat="item in trafficBounceCtrl.mainBouncePages" href="{{item.url}}"
+                        target="_blank">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

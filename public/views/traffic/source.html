@@ -1,0 +1,42 @@
+<div class="row configuration-form">
+    <div class="col-md-12">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">Day</button>
+            <button type="button" class="btn btn-default">Week</button>
+            <button type="button" class="btn btn-default">Month</button>
+        </div>
+    </div>
+</div>
+
+<div class="row traffic-detail">
+    <div class="col-md-4 country-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Country</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="trafficSourceCtrl.countryDistribution.data"
+                        labels="trafficSourceCtrl.countryDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 language-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Language</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="trafficSourceCtrl.languageDistribution.data"
+                        labels="trafficSourceCtrl.languageDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 refer-type-distribution">
+        <div class="panel panel-default">
+            <div class="panel-heading">Website</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="trafficSourceCtrl.websiteDistribution.data"
+                        labels="trafficSourceCtrl.websiteDistribution.labels" legend="true"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-6 conversion-trend">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Key Numbers</div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <h1>{{trafficConversionCtrl.inquiryNumbers.total}}</h1>
+                    <p>Total Sessions</p>
+                </div>
+                <div class="col-md-4">
+                    <h1>{{trafficConversionCtrl.inquiryNumbers.inquiry}}</h1>
+                    <p>Inquiry Sessions</p>
+                </div>
+                <div class="col-md-4">
+                    <h1>{{trafficConversionCtrl.inquiryNumbers.rate}}%</h1>
+                    <p>Inquiry Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Inquiry Trends in 24 Hours</div>
+            <div class="panel-body">
+                <canvas class="chart chart-line" data="trafficConversionCtrl.inquiryTrends.data"
+                        labels="trafficConversionCtrl.inquiryTrends.labels" legend="true"
+                        series="trafficConversionCtrl.inquiryTrends.series">
+                </canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 conversion-path">
+        <div class="panel panel-default">
+            <div class="panel-heading">Conversion Path</div>
+            <div class="panel-body">
+                todo
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Frequent User Behavior</div>
+            <div class="panel-body">
+                todo
+            </div>
+        </div>
+    </div>
+</div>

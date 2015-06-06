@@ -1,16 +1,8 @@
-/**
- * Created by Weiwei on 2015/3/31.
- */
+angular.module('ifocus.traffic')
 
-angular.module('ifocus.sessionControllers', [])
-
-    .controller('SessionPathCtrl', function (sessionPathData) {
+    .controller('TrafficPathCtrl', function(sessionPathData) {
 
         var vm = this;
-
-        vm.knowledge = {
-            level1: ['Homepage', 'Search', 'Product', 'Ad']
-        };
 
         vm.flowGraph = sessionPathData.flowData;
 
@@ -138,26 +130,4 @@ angular.module('ifocus.sessionControllers', [])
                 "land": 19
             }]
         };
-    })
-
-    .controller('SingleSessionReplayCtrl', function ($http) {
-        var vm = this;
-
-        vm.graph = [];
-
-        vm.loadSequenceData = function () {
-            $http.get('data/single-replay.json').success(function (data) {
-                vm.sessionSequence = data;
-            });
-        };
-
-        vm.loadGraphData = function () {
-            $http.get('data/single.json').success(function (data) {
-                angular.copy(data, vm.graph);
-                //vm.graph = data;
-            });
-        };
-
-        vm.loadSequenceData();
-        vm.loadGraphData();
     });

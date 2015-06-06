@@ -6,6 +6,7 @@ angular.module('ifocus.visualDirectives', [])
 function pathChart() {
     function link(scope, el, attr) {
 
+        console.log(scope);
         var energy = scope.data;
 
         var margin = {top: 1, right: 1, bottom: 6, left: 1},
@@ -106,6 +107,7 @@ function pathChart() {
             // d is the data item for the current data/element pair
             scope.$apply(function () {
                 scope.clickedPoint = d;
+                //console.log(d);
             });
         }
 
@@ -114,8 +116,6 @@ function pathChart() {
             sankey.relayout();
             links.attr("d", path);
         }
-
-
     }
 
     return {

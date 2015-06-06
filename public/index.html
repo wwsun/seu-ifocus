@@ -27,66 +27,68 @@
         </div>
 
         <ul class="nav navbar-nav navbar-nav-header">
-                <li class="first-nav-item"><a ui-sref="home" ui-sref-active="active">Home</a></li>
-                <li class="dropdown">
-                    <a ui-sref="status" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
-                       role="button" aria-expanded="false">Overview <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Visit Trends</a></li>
-                        <li><a href="#">Landing Pages</a></li>
-                        <li><a href="#">Search Engines</a></li>
-                        <li><a href="#">Keywords</a></li>
-                    </ul>
-                </li>
+            <li class="first-nav-item"><a ui-sref="home" ui-sref-active="active">Home</a></li>
+            <!--<li class="dropdown">-->
+                <!--<a ui-sref="overview" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"-->
+                   <!--role="button" aria-expanded="false">Overview <span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                    <!--<li><a href="#">Visit Trends</a></li>-->
+                    <!--<li><a href="#">Landing Pages</a></li>-->
+                    <!--<li><a href="#">Search Engines</a></li>-->
+                    <!--<li><a href="#">Keywords</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
 
 
-                <li class="dropdown">
-                    <a ui-sref="#" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
-                       role="button" aria-expanded="false">Conversion Funnels <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Visit Trends</a></li>
-                        <li><a href="#">Landing Pages</a></li>
-                        <li><a href="#">Search Engines</a></li>
-                        <li><a href="#">Keywords</a></li>
-                    </ul>
-                </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-expanded="false">Conversion Funnels <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Visit Trends</a></li>
+                    <li><a href="#">Landing Pages</a></li>
+                    <li><a href="#">Search Engines</a></li>
+                    <li><a href="#">Keywords</a></li>
+                </ul>
+            </li>
 
-                <li class="dropdown">
-                    <a ui-sref="sessionPath" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
-                       role="button" aria-expanded="false">Session Replay <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a ui-sref="sessionReplay">Session Replay</a></li>
-                        <li><a ui-sref="sessionPath" ui-sref-active="active">Path Analysis</a></li>
-                        <li><a href="#">Search Engines</a></li>
-                        <li><a href="#">Keywords</a></li>
-                    </ul>
-                </li>
+            <li class="dropdown">
+                <a ui-sref="sessionPath" ui-sref-active="active" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-expanded="false">Session Replay <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ui-sref="sessionReplay">Session Replay</a></li>
+                    <li><a ui-sref="sessionPath" ui-sref-active="active">Path Analysis</a></li>
+                    <li><a href="#">Search Engines</a></li>
+                    <li><a href="#">Keywords</a></li>
+                </ul>
+            </li>
 
-                <li><a>Heatmap</a></li>
-                <li><a>From Analytics</a></li>
-            </ul>
+            <li><a>Heatmap</a></li>
+            <li><a>From Analytics</a></li>
+        </ul>
 
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
+                    <li><a ui-sref="status" ui-sref-active="active"><i class="fa fa-user-md fa-fw"></i> 站点状态</a></li>
                     <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> 客户群体<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-users fa-fw"></i> 客户群体<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="" href="#">客户地区分布</a></li>
-                            <li><a href="#">客户来源分布</a></li>
-                            <li><a href="#">着陆页分布</a></li>
-                            <li><a href="#">客户群体年龄分布</a></li>
-                            <li><a href="#">客户群体特征分布</a></li>
+                            <li><a ui-sref="audienceGeo" ui-sref-active="active">客户地区分布</a></li>
+                            <li><a ui-sref="audienceSource" ui-sref-active="active">客户来源分布</a></li>
+                            <li><a ui-sref="audienceLanding" ui-sref-active="active">着陆页分布</a></li>
+                            <li><a ui-sref="audienceEvent" ui-sref-active="active">客户行为分布</a></li>
+                            <li><a ui-sref="audienceAge" ui-sref-active="active">客户群体年龄分布</a></li>
+                            <li><a ui-sref="audienceFeature" ui-sref-active="active">客户群体特征分布</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> 流量<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bus fa-fw"></i> 流量<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="" href="#">流量来源</a></li>
-                            <li><a href="#">路径分析</a></li>
-                            <li><a href="#">跳出率</a></li>
-                            <li><a href="#">转化率</a></li>
+                            <li><a ui-sref="trafficSource" ui-sref-active="active">流量来源</a></li>
+                            <li><a ui-sref="trafficPath" ui-sref-active="active">路径分析</a></li>
+                            <li><a ui-sref="trafficBounce" ui-sref-active="active">跳出率</a></li>
+                            <li><a ui-sref="trafficConversion" ui-sref-active="active">转化率</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -100,22 +102,26 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> 归因分析<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-search-plus fa-fw"></i> 归因分析<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a class="" href="#">促销效果分析</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
 
+                    <li><a href="#"><i class="fa fa-clock-o fa-fw"></i> 实时分析</a></li>
+
                 </ul>
             </div>
         </div>
-    </nav><!--./HEADER-->
+    </nav>
+    <!--./HEADER-->
 
     <div id="page-wrapper">
         <div class="container-fluid">
             <!-- ANGULAR DYNAMIC CONTENT -->
             <br/>
+
             <div ui-view></div>
         </div>
     </div>
@@ -140,9 +146,26 @@
 <!-- ANGULAR CUSTOM -->
 <script src="js/directives/visual.directives.js"></script>
 
+<script src="js/status/status.controller.js"></script>
+<script src="js/status/status.service.js"></script>
 
-<script src="js/controllers/home.controller.js"></script>
-<script src="js/controllers/overview.controller.js"></script>
+<!--Module Audience-->
+<script src="js/audience/geo.controller.js"></script>
+<script src="js/audience/source.controller.js"></script>
+<script src="js/audience/landing.controller.js"></script>
+<script src="js/audience/age.controller.js"></script>
+<script src="js/audience/feature.controller.js"></script>
+<script src="js/audience/event.controller.js"></script>
+<script src="js/audience/audience.service.js"></script>
+
+<!--Module Traffic-->
+<script src="js/traffic/source.controller.js"></script>
+<script src="js/traffic/path.controller.js"></script>
+<script src="js/traffic/conversion.controller.js"></script>
+<script src="js/traffic/bounce.controller.js"></script>
+<script src="js/traffic/traffic.service.js"></script>
+
+
 <script src="js/controllers/session.controller.js"></script>
 
 <script src="js/services/session.service.js"></script>
