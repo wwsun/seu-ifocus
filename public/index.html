@@ -77,6 +77,7 @@
                             <li><a ui-sref="audienceSource" ui-sref-active="active">客户来源分布</a></li>
                             <li><a ui-sref="audienceLanding" ui-sref-active="active">着陆页分布</a></li>
                             <li><a ui-sref="audienceEvent" ui-sref-active="active">客户行为分布</a></li>
+                            <li><a ui-sref="audienceForm" ui-sref-active="active">表单分析</a></li>                    
                             <li><a ui-sref="audienceAge" ui-sref-active="active">客户群体年龄分布</a></li>
                             <li><a ui-sref="audienceFeature" ui-sref-active="active">客户群体特征分布</a></li>
                         </ul>
@@ -89,6 +90,15 @@
                             <li><a ui-sref="trafficPath" ui-sref-active="active">路径分析</a></li>
                             <li><a ui-sref="trafficBounce" ui-sref-active="active">跳出率</a></li>
                             <li><a ui-sref="trafficConversion" ui-sref-active="active">转化率</a></li>
+                            <li><a ui-sref="trafficFunnel" ui-sref-active="active">转化漏斗</a></li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i> 会话分析<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        	<li><a ui-sref="sessionReplay" ui-sref-active="active">轨迹回放</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -96,7 +106,7 @@
                     <li>
                         <a href="#"><i class="fa fa-files-o fa-fw"></i> 效果<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="" href="#">转化分析</a></li>
+                            <li><a href="#">转化分析</a></li>
                             <li><a href="#">跳离</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -156,6 +166,7 @@
 <script src="js/audience/age.controller.js"></script>
 <script src="js/audience/feature.controller.js"></script>
 <script src="js/audience/event.controller.js"></script>
+<script src="js/audience/form.controller.js"></script>
 <script src="js/audience/audience.service.js"></script>
 
 <!--Module Traffic-->
@@ -163,12 +174,15 @@
 <script src="js/traffic/path.controller.js"></script>
 <script src="js/traffic/conversion.controller.js"></script>
 <script src="js/traffic/bounce.controller.js"></script>
+<script src="js/traffic/funnel.controller.js"></script>
 <script src="js/traffic/traffic.service.js"></script>
 
 
 <script src="js/controllers/session.controller.js"></script>
 
 <script src="js/services/session.service.js"></script>
+<script src="js/session/sessionreplay.controller.js"></script>
+<script src="js/session/sessionreplay.service.js"></script>
 <script src="js/appRoutes.js"></script>
 <script src="js/app.js"></script>
 

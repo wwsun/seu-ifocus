@@ -12,6 +12,16 @@ angular.module('ifocus.traffic')
 
             getSessionSequenceBySessionId: function (id) {
                 return $http.get(baseUrl + "visitflow/sequence/id/" + id);
+            },
+
+            //Add conversion target list
+            getConversionTargetList: function(date) {
+                return $http.get(baseUrl + 'customer/targetList/' + date);
+            },
+
+            //Add Conversion funnel
+            getConversionFunnel: function(date) {
+                return $http.get(baseUrl + 'customer/funnel/' + date);
             }
         };
     }]);

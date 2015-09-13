@@ -48,6 +48,13 @@ angular.module('ifocus.appRoutes', [])
                 controller: 'AudienceEventCtrl as audienceEventCtrl'
             })
 
+            .state('audienceForm', {
+                url: '/audience/form',
+                templateUrl: 'views/audience/form.html',
+                controller: 'AudienceFormCtrl as audienceFormCtrl'
+                //controller: 'AudienceEventCtrl as audienceEventCtrl'
+            })
+
             .state('trafficSource', {
                 url: '/traffic/source',
                 templateUrl: 'views/traffic/source.html',
@@ -77,6 +84,12 @@ angular.module('ifocus.appRoutes', [])
                 controller: 'TrafficConversionCtrl as trafficConversionCtrl'
             })
 
+            .state('trafficFunnel', {
+                url: '/traffic/funnel',
+                templateUrl: 'views/traffic/funnel.html',
+                controller: 'TrafficFunnelCtrl as trafficFunnelCtrl'
+            })
+
             .state('sessionPath', {
                 url: '/session/path',
                 templateUrl: 'views/session/path.html',
@@ -90,7 +103,13 @@ angular.module('ifocus.appRoutes', [])
 
             .state('sessionReplay', {
                 url: '/session/replay',
-                templateUrl: 'views/session/single-replay.html',
-                controller: 'SingleSessionReplayCtrl as replayCtrl'
+                templateUrl: 'views/session/replay.html',
+                controller: 'SessionReplayCtrl as replayCtrl'
             });
+
+            // .state('sessionReplay', {
+            //     url: '/session/replay',
+            //     templateUrl: 'views/session/single-replay.html',
+            //     controller: 'SingleSessionReplayCtrl as replayCtrl'
+            // });
     });

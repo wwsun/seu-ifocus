@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-md-4 overview-status">
+    <div class="col-md-4 heatmap-semantics">
         <div class="panel panel-default">
-            <div class="panel-heading">Overview Status</div>
+            <div class="panel-heading">Heatmap Semantics</div>
             <div class="panel-body">
-                <canvas class="chart chart-pie" data="audienceEventCtrl.overviewDistribution.data"
-                        labels="audienceEventCtrl.overviewDistribution.labels" legend="true"></canvas>
+                <canvas class="chart chart-pie" data="audienceEventCtrl.heatmapSemantic.data"
+                        labels="audienceEventCtrl.heatmapSemantic.labels" legend="true"></canvas>
             </div>
         </div>
 
@@ -82,10 +82,10 @@
     </div>
     <div class="col-md-4 mouse-event">
         <div class="panel panel-default">
-            <div class="panel-heading">Mouse Events</div>
+            <div class="panel-heading">Mousemove Events</div>
             <div class="panel-body">
-                <canvas class="chart chart-pie" data="audienceEventCtrl.mouseDistribution.data"
-                        labels="audienceEventCtrl.mouseDistribution.labels" legend="true"></canvas>
+                <canvas class="chart chart-pie" data="audienceEventCtrl.mousemoveDistribution.data"
+                        labels="audienceEventCtrl.mousemoveDistribution.labels" legend="true"></canvas>
             </div>
         </div>
 
@@ -97,6 +97,41 @@
                 <canvas class="chart chart-pie" data="audienceEventCtrl.scrollDistribution.data"
                         labels="audienceEventCtrl.scrollDistribution.labels" legend="true"></canvas>
             </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 config-query">
+        <div class="panel panel-default">
+            <div class="panel-heading">Hot Pages of click</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in audienceEventCtrl.clickHotPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="col-md-4 config-query">
+        <div class="panel panel-default">
+            <div class="panel-heading">Hot Pages of mousemove</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in audienceEventCtrl.mousemoveHotPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="col-md-4 config-query">
+        <div class="panel panel-default">
+            <div class="panel-heading">Hot Pages of scroll</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="item in audienceEventCtrl.scrollHotPages">
+                    <span class="badge">{{item.dup}}</span>{{item.url}}</li>
+            </ul>
         </div>
 
     </div>

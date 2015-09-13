@@ -19,8 +19,8 @@ To rebuild this project, you'll need to have the following:
 
 1. install dependencies
 
-    npm install
+        npm install
     
 2. running the application
 
-    grunt
+        grunt

@@ -35,6 +35,16 @@ angular.module('ifocus.audience', ['chart.js'])
                 vm.geoDistributionDetail = data;
             });
 
+        AudienceService.getConversionTargetList('2014-08-10')
+            .success(function (data) {
+                vm.conversionTargetList = data;
+            });
+
+        AudienceService.getConversionFunnel('2014-08-10')
+            .success(function (data) {
+                vm.conversionFunnel = data;
+            });
+
 
         function displayMainCountryDistribution(country) {
             AudienceService.getDistributionByCountry(country)

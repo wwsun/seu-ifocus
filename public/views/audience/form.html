@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-4 form-change">
+        <div class="panel panel-default">
+            <div class="panel-heading">Form change</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="audienceFormCtrl.formChange.data"
+                        labels="audienceFormCtrl.formChange.labels" legend="true"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 form-empty">
+        <div class="panel panel-default">
+            <div class="panel-heading">Form empty</div>
+            <div class="panel-body">
+                <canvas class="chart chart-pie" data="audienceFormCtrl.formEmpty.data"
+                        labels="audienceFormCtrl.formEmpty.labels" legend="true"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 form-avgtime">
+        <div class="panel panel-default">
+            <div class="panel-heading">Form average time</div>
+            <div class="panel-body">
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Form Type</th>
+                                <th>Average Time Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in audienceFormCtrl.formAvgTimeCost">
+                                <td>{{item.type}}</td>
+                                <td>{{item.averageTime | number}}</td>
+                            </tr>
+                        </tbody>
+               </table>
+            </div>
+        </div>
+
+    </div>
+</div>

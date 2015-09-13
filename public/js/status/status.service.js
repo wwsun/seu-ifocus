@@ -11,6 +11,21 @@ angular.module('ifocus.status')
                 return $http.get(baseUrl + 'overview/status/' + date);
             },
 
+            //Add click distribution by date
+            getClickDistributionByDate: function (date) {
+                return $http.get(baseUrl + 'overview/status/clicks/' + date);
+            },
+
+            //Add throughput numbers
+            getThroughputNumbers: function (date) {
+                return $http.get(baseUrl + 'overview/status/thruput/' + date);
+            },
+
+            //Add status list
+            getStatusList: function (date) {
+                return $http.get(baseUrl + 'overview/status/list/' + date);
+            },
+
             getRefererSearchEngines: function () {
                 return $http.get(baseUrl + 'overview/sessions/sources/se');
             },

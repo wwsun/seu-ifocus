@@ -9,6 +9,28 @@ angular.module('ifocus.status', ['chart.js'])
                 vm.statusNumbers = data; // data format
             });
 
+        // click distribution by date
+        StatusService.getClickDistributionByDate('2014-08-10')
+            .success(function (data) {
+                vm.click = {
+                    labels: data.hour,
+                    series: ['visits'],
+                    data: [data.dup]
+                };
+            });
+
+        //Add throughput numbers
+        StatusService.getThroughputNumbers('2014-08-10')
+            .success(function (data) {
+                vm.throughputNumbers = data; // data format
+            });
+
+        //Add status list
+        StatusService.getStatusList('2014-08-10')
+            .success(function (data) {
+                vm.statusList = data; // data format
+            });
+
         // one day session distribution
         StatusService.getSessionDistributionByDate('2014-08-10')
             .success(function (data) {
