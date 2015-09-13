@@ -14,6 +14,7 @@ angular.module('ifocus', [
   'ifocus.status',
   'ifocus.audience',
   'ifocus.traffic',
+  'ifocus.jump',
   'ifocus.session',//modify
   'ifocus.sessionController',//modify
 

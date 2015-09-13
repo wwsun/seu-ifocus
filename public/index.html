@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <base href="/">
 
-    <title>iFocus - visualize what you want</title>
+    <title>iFocus - visualize your website</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
                             <li><a ui-sref="audienceSource" ui-sref-active="active">客户来源分布</a></li>
                             <li><a ui-sref="audienceLanding" ui-sref-active="active">着陆页分布</a></li>
                             <li><a ui-sref="audienceEvent" ui-sref-active="active">客户行为分布</a></li>
-                            <li><a ui-sref="audienceForm" ui-sref-active="active">表单分析</a></li>                    
+                            <li><a ui-sref="audienceForm" ui-sref-active="active">表单分析</a></li>
                             <li><a ui-sref="audienceAge" ui-sref-active="active">客户群体年龄分布</a></li>
                             <li><a ui-sref="audienceFeature" ui-sref-active="active">客户群体特征分布</a></li>
                         </ul>
@@ -58,7 +58,7 @@
                     <li>
                         <a href="#"><i class="fa fa-files-o fa-fw"></i> 会话分析<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                        	<li><a ui-sref="sessionReplay" ui-sref-active="active">轨迹回放</a></li>
+                            <li><a ui-sref="sessionReplay" ui-sref-active="active">轨迹回放</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -72,9 +72,9 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-search-plus fa-fw"></i> 归因分析<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-search-plus fa-fw"></i> 跳转分析<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="" href="#">促销效果分析</a></li>
+                            <li><a ui-sref="flowJumping" ui-sref-active="active">流量跳转分析</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -137,6 +137,8 @@
 <script src="js/traffic/funnel.controller.js"></script>
 <script src="js/traffic/traffic.service.js"></script>
 
+<!--Module Jump New!!!-->
+<script src="js/jump/flowJump.controller.js"></script>
 
 <script src="js/controllers/session.controller.js"></script>
 
