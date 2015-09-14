@@ -48,3 +48,7 @@ svg {
 .link:hover {
     stroke-opacity: .5;
 }
+
+.flow-stage:hover {
+    fill: green;
+}

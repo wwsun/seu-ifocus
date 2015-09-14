@@ -19,13 +19,13 @@ angular.module('ifocus', [
   'ifocus.sessionController',//modify
 
   // --- SERVICES ---
-  'ifocus.sessionServices',
+  'ifocus.sessionServices', // old
 
   // --- CONTROLLERS ---
   //'ifocus.homeControllers',
   //'ifocus.statusControllers',
   //'ifocus.overviewControllers',
-  'ifocus.sessionControllers'
+  'ifocus.sessionControllers' // old
 
 ])
 
