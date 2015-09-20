@@ -4,7 +4,7 @@ angular.module('ifocus.traffic')
     var _this = this;
 
     _this.clickedNode = {
-      name: 'default'
+      category: 'default'
     };
 
   }]);
