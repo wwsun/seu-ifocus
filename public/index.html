@@ -48,6 +48,7 @@
                         <ul class="nav nav-second-level">
                             <li><a ui-sref="trafficSource" ui-sref-active="active">流量来源</a></li>
                             <li><a ui-sref="trafficPath" ui-sref-active="active">路径分析</a></li>
+                            <li><a ui-sref="trafficSemanticPath" ui-sref-active="active">语义路径</a></li>
                             <li><a ui-sref="trafficBounce" ui-sref-active="active">跳出率</a></li>
                             <li><a ui-sref="trafficConversion" ui-sref-active="active">转化率</a></li>
                             <li><a ui-sref="trafficFunnel" ui-sref-active="active">转化漏斗</a></li>
@@ -107,14 +108,16 @@
 <script src="libs/angular/angular.min.js"></script>
 <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-<script src="libs/d3/d3.min.js"></script>
-<script src="vendors/sankey.min.js"></script>
+<!--<script src="libs/d3/d3.min.js"></script>-->
+<script src="vendors/d3.v3.js"></script>
+<script src="vendors/sankey.js"></script>
 
 <script src="libs/Chart.js/Chart.min.js"></script>
 <script src="libs/angular-chart.js/dist/angular-chart.min.js"></script>
 
 <!-- ANGULAR CUSTOM -->
 <script src="js/directives/visual.directives.js"></script>
+<script src="js/directives/flowGraph.directive.js"></script>
 
 <script src="js/status/status.controller.js"></script>
 <script src="js/status/status.service.js"></script>
@@ -132,6 +135,7 @@
 <!--Module Traffic-->
 <script src="js/traffic/source.controller.js"></script>
 <script src="js/traffic/path.controller.js"></script>
+<script src="js/traffic/semanticPath.controller.js"></script>
 <script src="js/traffic/conversion.controller.js"></script>
 <script src="js/traffic/bounce.controller.js"></script>
 <script src="js/traffic/funnel.controller.js"></script>

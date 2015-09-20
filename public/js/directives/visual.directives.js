@@ -6,8 +6,8 @@ angular.module('ifocus.visualDirectives', [])
 function pathChart() {
     function link(scope, el, attr) {
 
-        console.log(scope);
         var energy = scope.data;
+        console.log(energy);
 
         var margin = {top: 1, right: 1, bottom: 6, left: 1},
             width = 800,

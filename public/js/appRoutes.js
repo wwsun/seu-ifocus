@@ -72,6 +72,12 @@ angular.module('ifocus.appRoutes', [])
         }
       })
 
+      .state('trafficSemanticPath', {
+        url: '/traffic/path/semantic',
+        templateUrl: 'views/traffic/semantic-path.html',
+        controller: 'TrafficSemanticPathCtrl as trafficSemanticPathCtrl'
+      })
+
       .state('trafficBounce', {
         url: '/traffic/bounce',
         templateUrl: 'views/traffic/bounce.html',

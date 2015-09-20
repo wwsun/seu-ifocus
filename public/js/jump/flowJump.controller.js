@@ -5,9 +5,9 @@ angular.module('ifocus.jump', ['chart.js'])
 
     vm.jumpInfo = {
       topPages: [
-        {url: 'http://foo/bar', rank: 20},
-        {url: 'http://foo/bar', rank: 10},
-        {url: 'http://foo/bar', rank: 5}
+        {url: 'http://foo/bar', nums: 20},
+        {url: 'http://foo/bar', nums: 10},
+        {url: 'http://foo/bar', nums: 5}
       ],
 
       cateDistribution: {
@@ -23,16 +23,28 @@ angular.module('ifocus.jump', ['chart.js'])
     };
 
 
-    vm.getJumpingData = function (stage) {
+    vm.getJumpingDataByStage = function (stage) {
 
+      FlowJumpService.fetchJumpingDataByStage(stage).success(function (data) {
+        vm.jumpInfo.topPages = data[0].topPages.slice(0, 5);
 
-      FlowJumpService.fetchJumpingDataByStage(stage)
-        .success(function (data) {
-          // todo:
+        var cateArr = data[0].cateDistribution.slice(0, 5);
+        var newCateDist = {
+          labels: [],
+          data: [[]]
+        };
 
-        });
+        var i;
 
-      console.log('hello');
+        for (i=0; i< 5; i++) {
+          newCateDist.labels.push(cateArr[i].category);
+          newCateDist.data[0].push(cateArr[i].nums);
+        }
+
+        vm.jumpInfo.cateDistribution = newCateDist;
+
+        //vm.jumpInfo.cateDistribution = data[0].cateDistribution.slice(0, 5);
+      });
     };
 
   }]);

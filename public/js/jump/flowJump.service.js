@@ -3,8 +3,7 @@ angular.module('ifocus.jump')
 
     return {
       fetchJumpingDataByStage : function (stage) {
-        // todo:
-        return $http.get(baseUrl + 'visitflow/path/stateInfo/' + stage);
+        return $http.get(baseUrl + 'visitflow/path/jumpInfo/' + stage);
       }
 
     };

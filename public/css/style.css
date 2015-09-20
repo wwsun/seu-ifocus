@@ -1,5 +1,5 @@
 body {
-    min-height: 1000px;
+    /*min-height: 1000px;*/
 }
 
 .first-nav-item {
@@ -51,4 +51,9 @@ svg {
 
 .flow-stage:hover {
     fill: green;
+}
+
+.stage-text:hover {
+    fill: yellow;
+    cursor: pointer;
 }
