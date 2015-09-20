@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"name": "类型1"},
+    {"name": "类型2"},
+    {"name": "类型3"},
+    {"name": "类型4"},
+    {"name": "类型5"}
+  ],
+
+  "links": [
+    {"source": 0, "target": 1, "value": 50},
+    {"source": 0, "target": 2, "value": 30},
+    {"source": 0, "target": 3, "value": 60},
+    {"source": 1, "target": 4, "value": 30},
+    {"source": 2, "target": 4, "value": 20}
+  ]
+}

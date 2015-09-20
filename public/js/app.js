@@ -14,18 +14,19 @@ angular.module('ifocus', [
   'ifocus.status',
   'ifocus.audience',
   'ifocus.traffic',
+  'ifocus.jump',
   'ifocus.session',//modify
   'ifocus.sessionController',//modify
 
   // --- SERVICES ---
-  'ifocus.sessionServices',
+  'ifocus.sessionServices', // old
 
   // --- CONTROLLERS ---
   //'ifocus.homeControllers',
   //'ifocus.statusControllers',
   //'ifocus.overviewControllers',
-  'ifocus.sessionControllers'
+  'ifocus.sessionControllers' // old
 
 ])
 
-  .constant('baseUrl', 'http://223.3.85.39:8080/vislog-restful/api/');
+  .constant('baseUrl', 'http://223.3.87.87:8080/vislog-restful/api/');

@@ -2,7 +2,12 @@
     <div class="col-md-8 left">
         <div class="panel panel-default">
             <div class="panel-body">
-                <path-chart data="trafficPathCtrl.flowGraph" clicked-point="trafficPathCtrl.clickedNode"></path-chart>
+                <flow-graph data="data/graph4.json"
+                            name="url"
+                            clicked-point="trafficPathCtrl.clickedNode">
+
+                </flow-graph>
+                <!--<path-chart data="trafficPathCtrl.flowGraph" clicked-point="trafficPathCtrl.clickedNode"></path-chart>-->
             </div>
         </div>
 
