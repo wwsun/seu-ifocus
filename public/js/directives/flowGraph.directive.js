@@ -37,6 +37,9 @@ function flowGraph() {
         links.attr("d", path);
       }
 
+      // 你可以指定属性name来指定节点的名字，否则默认使用name
+      var nodeName = $attrs.name || 'name';
+
       sankey.nodes(data.nodes).links(data.links).layout(32);
 
       var links = svg.append("g")
@@ -55,7 +58,7 @@ function flowGraph() {
 
       links.append("title")
         .text(function (d) {
-          return d.source.name + " -> " + d.target.name + "\n" + format(d.value);
+          return d.source[nodeName] + " -> " + d.target[nodeName] + "\n" + format(d.value);
         });
 
       var nodes = svg.append("g")
@@ -84,7 +87,7 @@ function flowGraph() {
         })
         .attr("width", sankey.nodeWidth())
         .style("fill", function (d) {
-          return (d.color = color(d.name.replace(/ .*/, "")));
+          return (d.color = color(d[nodeName].replace(/ .*/, "")));
         })
         .style("stroke", function (d) {
           return d3.rgb(d.color).darker(2);
@@ -103,7 +106,7 @@ function flowGraph() {
         .attr("text-anchor", "end")
         .attr("transform", null)
         .text(function (d) {
-          return d.name;
+          return d[nodeName];
         })
         .filter(function (d) {
           return d.x < width / 2;
@@ -115,8 +118,7 @@ function flowGraph() {
 
       function nodeClickListener(d) {
         $scope.$apply(function () {
-          // TODO: click handler
-          console.log(d);
+          $scope.clickedPoint = d;
         });
       }
 
@@ -127,6 +129,6 @@ function flowGraph() {
   return {
     link: link,
     restrict: 'E',
-    scope: {data: '='}
+    scope: {data: '=', clickedPoint: '='}
   };
 }
