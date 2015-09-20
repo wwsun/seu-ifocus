@@ -3,6 +3,8 @@ angular.module('ifocus.traffic')
 
     var _this = this;
 
-    // TODO: semantic path controller
+    _this.clickedNode = {
+      name: 'default'
+    };
 
   }]);
