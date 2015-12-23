@@ -2,15 +2,16 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">User visit sequences</div>
-        <table class="table">
+        <table class="table table-hover">
             <thead>
-            <tr><th>#</th><th>Date Time</th><th>Url</th></tr>
+            <tr><th>#</th><th>Date Time</th><th>Url</th><th>Semantic</th></tr>
             </thead>
             <tbody>
             <tr ng-repeat="item in replayCtrl.sessionSequence">
                 <td>{{$index+1}}</td>
                 <td>{{item.datetime}}</td>
-                <td>{{item.url}}</td>
+                <td><a href="#">{{item.url}}</a></td>
+                <td>{{item.product}}</td>
             </tr>
             </tbody>
         </table>
@@ -29,7 +30,16 @@
     <br/>
 
     <div class="panel panel-default session-list">
-        <div class="panel-heading">Session List</div>
-        <div class="panel-body"></div>
+        <div class="panel-heading">Event(Click)</div>
+        <div class="panel-body">
+            <canvas class="chart chart-pie" data="replayCtrl.pageDetailByUrl.data.click"
+                    labels="replayCtrl.pageDetailByUrl.labels" legend="true"></canvas>
+        </div>
+
+        <div class="panel-heading">Event(Hover)</div>
+        <div class="panel-body">
+            <canvas class="chart chart-pie" data="replayCtrl.pageDetailByUrl.data.hover"
+                    labels="replayCtrl.pageDetailByUrl.labels" legend="true"></canvas>
+        </div>
     </div>
 </div>
