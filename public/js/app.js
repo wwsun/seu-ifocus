@@ -29,4 +29,4 @@ angular.module('ifocus', [
 
 ])
 
-  .constant('baseUrl', 'http://223.3.87.87:8080/vislog-restful/api/');
+  .constant('baseUrl', 'http://223.3.89.199:8080/vislog-1.0/vislog-restful/api/');
